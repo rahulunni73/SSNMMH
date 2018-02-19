@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets1/bower_components/Ionicons/css/ionicons.min.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets1/bower_components/select2/dist/css/select2.min.css">
         <!-- Theme style -->
+         <link rel="stylesheet" href="<?php echo base_url(); ?>assets1/dist/css/test.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets1/dist/css/AdminLTE.min.css">
         <!-- AdminLTE Skins. Choose a skin from the css/skins
              folder instead of downloading all of them to reduce the load. -->
@@ -31,7 +32,7 @@
         <!-- Google Font -->
        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">-->
     </head>
-    <body class="hold-transition skin-blue sidebar-mini">
+    <body class="hold-transition skin-blue sidebar-mini fixed">
         <div class="wrapper">
 
             <header class="main-header">

@@ -28,13 +28,13 @@ class Main_model extends CI_Model {
             'EMAIL' => $email,
             'DESIGNATION' => $designation
         );
-        $insert = $this->db->insert('MEMBERS', $new_insert_data);
+        $insert = $this->db->insert('Members_Master', $new_insert_data);
         return $insert;
     }
 
     public function user_validation($user_name, $password) {
         $this->db->select('USER_NAME, PASSWORD');
-        $this->db->from('MEMBERS');
+        $this->db->from('Members_Master');
         $this->db->where('USER_NAME', $user_name);
         $this->db->where('PASSWORD', $password);
         $this->db->limit(1);

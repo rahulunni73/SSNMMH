@@ -20,17 +20,22 @@ class Admin_model extends CI_Model {
     /* ..................................CREATION......................................... */
 
     //create/add new doctor
-    public function add_new_doctor($doctor_name, $qualification, $specialization, $department, $op_days, $doct_img, $doct_cf) {
-        $new_insert_data = array(
-            'DOCTOR_NAME' => $doctor_name,
+    public function add_new_doctor($doctor_name, $qualification, $specialization, $department_id, $op_days, $doct_img, $doct_cf) {
+
+
+
+       $new_insert_data = array(
+            'DOC_NAME' => $doctor_name,
             'QUALIFICATION' => $qualification,
             'SPECIALIZATION' => $specialization,
-            'DEPARTMENT' => $department,
             'OPDAYS' => $op_days,
             'IMG_PATH' => $doct_img,
-            'CONS_FEE' => $doct_cf
+            'CONS_FEE' => $doct_cf,
+            'DEPT_ID' => $department_id,
         );
-        $insert = $this->db->insert('DOCTORMASTER', $new_insert_data);
+
+       
+        $insert = $this->db->insert('Doctor_Master', $new_insert_data);
         return $insert;
     }
 
@@ -41,7 +46,7 @@ class Admin_model extends CI_Model {
             'DESCRIPTIONS' => $dept_description,
             'IMG_PATH' => $dept_img_path
         );
-        $insert = $this->db->insert('DEPARTMENTMASTER', $new_insert_data);
+        $insert = $this->db->insert('Department_Master', $new_insert_data);
         return $insert;
     }
 
@@ -52,11 +57,11 @@ class Admin_model extends CI_Model {
             'DESCRIPTIONS' => $serv_description,
             'IMG_PATH' => $serv_img_path
         );
-        $insert = $this->db->insert('SERVICEMASTER', $new_insert_data);
+        $insert = $this->db->insert('Service_Master', $new_insert_data);
         return $insert;
     }
 
-    public function add_feedbacks($name, $email, $phone, $subject, $comments) {
+    public function add_Feedbacks($name, $email, $phone, $subject, $comments) {
         $new_insert_data = array(
             'Name' => $name,
             'Email' => $email,
@@ -64,16 +69,16 @@ class Admin_model extends CI_Model {
             'Subject' => $subject,
             'Comments' => $comments
         );
-        $insert = $this->db->insert('FEEDBACK', $new_insert_data);
+        $insert = $this->db->insert('Feedback', $new_insert_data);
         return $insert;
     }
 
-    public function newsLetterSignup($name, $email) {
+    public function News_LetterSignup($name, $email) {
         $new_insert_data = array(
             'Name' => $name,
             'Email' => $email,
         );
-        $insert = $this->db->insert('NEWSLETTER', $new_insert_data);
+        $insert = $this->db->insert('News_Letter', $new_insert_data);
         return $insert;
     }
 
@@ -82,14 +87,14 @@ class Admin_model extends CI_Model {
     //get all department details
     public function getDepartments() {
         $this->db->select('DEPT_ID,DEPT_NAME,DESCRIPTIONS,IMG_PATH');
-        $this->db->from('DEPARTMENTMASTER');
+        $this->db->from('Department_Master');
         $query = $this->db->get();
         return $query->result();
     }
 
     //get all department names only
     public function getAllDepartmentName() {
-       $result = $this->db->select('DEPT_ID, DEPT_NAME')->get('DEPARTMENTMASTER')->result_array(); 
+       $result = $this->db->select('DEPT_ID, DEPT_NAME')->get('Department_Master')->result_array(); 
 
         $departments = array(); 
         foreach($result as $r) { 
@@ -103,14 +108,14 @@ class Admin_model extends CI_Model {
     //get all doctors details
     public function getDoctorsInfo() {
         $this->db->select('DOCTOR_ID,DOCTOR_NAME,QUALIFICATION,SPECIALIZATION,DEPARTMENT,OPDAYS,IMG_PATH,CONS_FEE');
-        $this->db->from('DOCTORMASTER');
+        $this->db->from('Doctor_Master');
         $query = $this->db->get();
         return $query->result();
     }
 
     //get all doctor names only
     public function getAllDoctorName() {
-        $query = $this->db->get('DOCTORMASTER');
+        $query = $this->db->get('Doctor_Master');
         if ($query->num_rows() > 0) {
             foreach ($query->result() as $row) {
                 $data[DOCTOR_NAME] = $row->DOCTOR_NAME;
@@ -122,7 +127,7 @@ class Admin_model extends CI_Model {
     //get doctors dept,name,img_path
     public function getDoctorsShortInfo() {
         $this->db->select('DOCTOR_NAME,DEPARTMENT,IMG_PATH');
-        $this->db->from('DOCTORMASTER');
+        $this->db->from('Doctor_Master');
         $query = $this->db->get();
         return $query->result();
     }
@@ -130,18 +135,18 @@ class Admin_model extends CI_Model {
     //get all service details
     public function getServices() {
         $this->db->select('SERV_ID,SERV_NAME,DESCRIPTIONS,IMG_PATH');
-        $this->db->from('SERVICEMASTER');
+        $this->db->from('Service_Master');
         $query = $this->db->get();
         return $query->result();
     }
 
     public function getCounts() {
 
-        $query1 = $this->db->query('SELECT * FROM DOCTORMASTER');
+        $query1 = $this->db->query('SELECT * FROM Doctor_Master');
         $doctorsCount = $query1->num_rows();
-        $query2 = $this->db->query('SELECT * FROM SERVICEMASTER');
+        $query2 = $this->db->query('SELECT * FROM Service_Master');
         $serviceCount = $query2->num_rows();
-        $query3 = $this->db->query('SELECT * FROM DEPARTMENTMASTER');
+        $query3 = $this->db->query('SELECT * FROM Department_Master');
         $departmentCount = $query3->num_rows();
 
         $counts = array(
@@ -154,19 +159,19 @@ class Admin_model extends CI_Model {
     }
 
     public function getDeptDoctorsInfo($dept_id) {
-
-        $this->db->select('DOCTOR_ID,DOCTOR_NAME,QUALIFICATION,SPECIALIZATION,DEPARTMENT,OPDAYS,IMG_PATH,CONS_FEE');
-        $this->db->from('DOCTORMASTER');
-        $this->db->where('DEPARTMENT',$dept_id);
-        $query = $this->db->get();
+    
+$this->db->select('t1.DOCT_ID,t1.DOC_NAME,t1.QUALIFICATION,t1.SPECIALIZATION,t1.OPDAYS,t1.IMG_PATH,t1.CONS_FEE,t2.DESCRIPTIONS');
+      $this->db->from('Doctor_Master as t1');
+      $this->db->where('t1.DEPT_ID', $dept_id);
+      $this->db->join('Department_Master as t2', 't1.DEPT_ID = t2.DEPT_ID', 'LEFT');
+      $query = $this->db->get();
         return $query->result();
-
     }
 
 
     public function getDeptName($dept_id){
         $this->db->select('DEPT_NAME');
-        $this->db->from('DEPARTMENTMASTER');
+        $this->db->from('Department_Master');
         $this->db->where('DEPT_ID',$dept_id);
         $query = $this->db->get();
         return $query->result();
@@ -177,20 +182,20 @@ class Admin_model extends CI_Model {
     //delete department
     public function deleteDepartment($id) {
         $this->db->where('DEPT_ID', $id);
-        $delete = $this->db->delete('DEPARTMENTMASTER');
+        $delete = $this->db->delete('Department_Master');
         return $delete;
     }
 
     //delete service
     public function deleteService($id) {
         $this->db->where('SERV_ID', $id);
-        $delete = $this->db->delete('SERVICEMASTER');
+        $delete = $this->db->delete('Service_Master');
         return $delete;
     }
 
     public function deleteDoctor($doctor_id) {
         $this->db->where('DOCTOR_ID', $doctor_id);
-        $delete = $this->db->delete('DOCTORMASTER');
+        $delete = $this->db->delete('Doctor_Master');
         $temp = $this->db->affected_rows();
         return $temp;
     }
@@ -207,7 +212,7 @@ class Admin_model extends CI_Model {
             'CONS_FEE' => $doct_cf
         );
         $this->db->where('DOCTOR_ID', $doc_id);
-        $update = $this->db->update('DOCTORMASTER', $data);
+        $update = $this->db->update('Doctor_Master', $data);
         return $update;
     }
 

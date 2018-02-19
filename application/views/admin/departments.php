@@ -10,7 +10,8 @@
         </ol>
     </section>
 
-    <div class="row" style="margin: 5px;">
+
+    <div class="row" style="margin: 0px;">
 
         <div class="col-md-8">
             <!-- Horizontal Form -->
@@ -42,7 +43,7 @@
                                 'placeholder' => 'Department',
                                 'class' => 'form-control'
                             );
-                            echo form_input('dept_name', '', $data1);
+                            echo form_input('dept_name','', $data1);
                             ?>
                             <div style="color: red"><?php echo form_error('dept_name'); ?></div>
                         </div>
@@ -71,14 +72,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="userfile" class="col-sm-2 control-label">Upload Image</label>
+                        <label for="userfile" class="col-sm-2 control-label">Dept.Image</label>
                         <div class="col-sm-10">
                             <input name="userfile" id="fileupload" type="file" multiple="true" onchange="readURL(this);">
                             <div style="color: red"><?php echo form_error('uploads'); ?></div>
                         </div>
-
                     </div>
-
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">
@@ -95,11 +94,14 @@
 
         <div class="col-lg-4" class="profile_pic_container">
             <div>
-                <img  height=250px width=400px style=" border: 1px solid;" id="dept_img_preview" src="<?php echo base_url() . "assets1/dist/img/dept_dummy.png" ?>" alt="your image" />
+                <img width="100%" height="100%" style=" border: 1px solid;" id="dept_img_preview" src="<?php echo base_url() . "assets1/dist/img/dept_dummy.png" ?>" alt="department image" />
             </div>
         </div>
     </div><!- Row ENds--->
 
+
+
+<!-- This div is intent to display error or success status upon database operations-->
     <div class="row">
         <div class="col-lg-12">
             <?php
@@ -118,8 +120,11 @@
             }
             ?>
         </div>    
-
     </div>
+
+
+
+
 
 <?php 
 //if no records found do not show the department section

@@ -36,6 +36,7 @@ class Create extends CI_Controller {
                 redirect('admin/dashboard/create_doctor', 'refresh');
             } else {
                 $values = $this->get_form_values_doctors();
+
                 $this->insert_to_docMaster($values, $result);
             }
         }
@@ -51,7 +52,11 @@ class Create extends CI_Controller {
             $result = $this->setUpImageUpload(400, 250, 'departments'); //pass the dimensions of the image
             if (!$result['status']) {
                 $data = array('main_content' => 'departments', 'status_message' => $result['error']);
-                $this->load->view('admin/includes/template2', $data);
+                //$this->load->view('admin/includes/template2', $data);
+                $this->session->set_flashdata('status_message', $result['error']);
+                $this->session->set_flashdata('status', false);
+                redirect('admin/dashboard/departments', 'refresh');
+
             } else {
                 $values = $this->get_form_values_department();
                 $this->insert_to_deptMaster($values, $result);

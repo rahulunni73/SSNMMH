@@ -228,7 +228,7 @@
             if (isset($test)) {
                 $status_message = $this->session->flashdata('status_message');
                 if ($test === true) {
-                    echo "<div class='alert alert-success alert-dismissible'>
+                    echo "<div  id='alert-response' class='animate-flicker alert alert-success alert-dismissible'>
                 <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
                $status_message</div>";
                 } else {
