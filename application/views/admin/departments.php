@@ -146,12 +146,12 @@ if ( sizeof($records) > 0 ) { ?>
                 <div class="box-body">
                     <ul class="products-list product-list-in-box" id="deptList">
                         <?php foreach ($records as $rows) {?>
-                            <li class="item">
-                                <div class="product-img"><img src='<?php echo $IMG_PATH.'departments/'.$rows->IMG_PATH  ?>' alt="Product Image"></div>
+                            <li class="item" style="border-color:#E0E0E0;border-bottom: ridge; margin-bottom: 8px;background: #F5F5F5">
+                                <div style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" class="product-img"><img src='<?php echo $IMG_PATH.'departments/'.$rows->IMG_PATH  ?>' alt="Product Image"></div>
                                 <div class="product-info" style="text-transform: uppercase; font-size:medium">
-                                    <a href="" class="product-title"><?php echo $rows->DEPT_NAME; ?></a>
-                                    <span class="label pull-right"><a  onclick="return doconfirm()" type="button"  href="<?php echo base_url() . "index.php?/admin/delete/removeDepartment/$rows->DEPT_ID/$rows->IMG_PATH " ?>"  class="btn btn-block btn-danger">Remove</a></span>
-                                    <span class="product-description"><?php echo $rows->DESCRIPTIONS;?></span>
+                                    <a href=""  class="product-title"><?php echo $rows->DEPT_NAME; ?></a>
+                                    <span class="label pull-right"><a  onclick="return doconfirm()" type="button"  href="<?php echo base_url() . "index.php?/admin/delete/removeDepartment/$rows->DEPT_ID/$rows->IMG_PATH " ?>"  class="btn  btn-danger" style="text-transform: capitalize; padding:3px; box-shadow: 3px 3px grey;" >Remove</a></span>
+                                    <span style="text-transform: capitalize;"class="product-description"><?php echo $rows->DESCRIPTIONS;?></span>
                                 </div>
                             </li>
                         <?php } ?>
