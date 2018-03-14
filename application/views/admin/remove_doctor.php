@@ -1,3 +1,4 @@
+ <?php $this->load->helper('custom_helper'); ?>
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
@@ -10,146 +11,126 @@
         </ol>
     </section>
 
+<div class="container-fluid">
 
-    <!-- SELECT2 EXAMPLE -->
-    <div class="box box-default">
-        <div class="box-header with-border">
-            <h3 class="box-title">Delete Doctor</h3>
-            <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
-            </div>
-        </div>
-        <!-- /.box-header -->
-        <?php
-        $attributes = array('id' => 'doctor_deletion_form', 'method' => 'post');
-        echo form_open_multipart('admin/delete/removeDoctor', $attributes);
-        ?>
-        <div class="box-body">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Doctor</label>
-                        <select class="form-control select2" style="width: 100%;" name='doctList' id="doctList" onchange="getInfo(this);">
-                        </select>
-                        <input type="hidden" id="doctor_id" name= 'doctor_id' />
-                    </div>
-                    <div class="form-group">
-                        <label>Department</label>
-                        <select class="form-control select2"  disabled="true" style="width: 100%;" name='deptList' id="deptList">
-                        </select>
-                    </div>
-                </div>
+<div class="row">
+<div class="col-md-4 col-md-offset-4">
 
-                <div class="col-md-6">
-                    <img name= 'image_path' height=128 width=128  style="border: 1px solid;" id="doct_img" src="<?php echo base_url() . "assets1/dist/img/dummy.jpg" ?>" alt="" />
-                </div>
-
-            </div>
-            <!-- /.row -->
-            <input type="hidden" id="image_path" name= 'image_path' />
-            <button  type='submit' class="btn btn-info" onClick="return doconfirm();">Delete</button>
-        </div>
-        <?php
-        echo form_close();
-        ?>
-    </div>
-
-
-    <div class="row">
-
-        <div class="col-lg-offset-2 col-lg-8 col-lg-offset-8">
-            <?php
-            $test = $this->session->flashdata('status');
-            if (isset($test)) {
-                $status_message = $this->session->flashdata('status_message');
-                if ($test === true) {
-                    echo "<div class='alert alert-success alert-dismissible'>
-                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
-               $status_message</div>";
-                } else {
-                    echo "<div class='alert alert-danger alert-dismissible'>
-                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
-               $status_message</div>";
-                }
-            }
-            ?>
-        </div>     
-
-    </div>
-
-
-
-
-
+   <div style="margin-bottom: 16px;"><img height=128 width=128 style=" border: 1px solid;" id="doctor_picture" 
+   src="<?php echo base_url(). "assets1/dist/img/dummy.jpg" ?>" alt="your image" /></div>            
 </div>
-<!-- /.box -->
+</div>
 
 
+<?php
+$form_attributes = array('role' => 'form', 'id' => 'doctor_delete_form', 'method' => 'post');
+echo form_open_multipart('admin/doctors/removeDoctor', $form_attributes);?>
+
+<div class="row">
+    <div class="col-md-6 col-sm-12">
+        <div class="form-group">
+                <?php            
+                $doctor_attribute = array(
+                'name' => 'doctor_id',
+                'onChange' => 'loadDoctorInformation()',
+                'id' => 'doctor_dropdown',
+                'class' => 'form-control select2'
+                );
+                echo my_form_dropdown($doctor_attribute, $doct_names,'', '', '');?>
+                <div style="color: red"><?php echo form_error('doctor_id'); ?></div>
+        </div>
+           </div> 
+            <div class="col-md-6 col-sm-12">
+
+                <div class="form-group">
+                        <?php
+                        $data = array(
+                        'name' => 'department',
+                        'placeholder' => 'Department',
+                        'class' => 'form-control select2',
+                        'id' => 'auto-department' 
+                        );
+                    echo form_dropdown('department', $dept_names,'0', $data);?>
+                    <div style="color: red"><?php echo form_error('department'); ?></div>
+               </div>    
+            </div>
+            <input type="hidden" id="image_path" name='image_path' /> 
+</div>
+
+<?php echo form_close();?>
+
+<div class="row">    
+    <div class="col-md-12 col-md-offset-4" style="margin-top: 16px;">
+        <button onClick="openModalConfirmation()" data-toggle="modal"  disabled="true" id="delete_btn" type="submit" class="btn btn-info" style="background-color:blue;">Delete</button>
+    </div>
+</div>
+
+        <div class="modal modal-danger fade" id="modal-danger">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Confirmation</h4>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure want to delete</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">No</button>
+                <button id="form_submit" type="button" class="btn btn-outline">Yes</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
 
 <!-- jQuery 3 -->
 <script src="<?php echo base_url() . "assets1/bower_components/jquery/dist/jquery.min.js" ?>"></script>
 <script src="<?php echo base_url() . "assets1/bower_components/select2/dist/js/select2.full.min.js" ?>"></script>
 <!-- Page script -->
 <script>
-                var temp;
-                $(function () {
-                    //Initialize Select2 Elements
-                    $('.select2').select2();
-                    doctorList();
-                    function doctorList() {
-                        $.ajax({
-                            type: 'ajax',
-                            url: '<?php echo base_url() . "index.php?/admin/retrive/getDoctorsDetails" ?>',
-                            async: false,
-                            dataType: "json",
-                            success: function (data) {
-                                temp = data;
-                                var options = '';
-                                var options2 = '';
-                                var i;
-                                for (i = 0; i < data.length; i++)
-                                {
-                                    options += '<option>' + data[i].DOCTOR_NAME + '</option>';
-                                    options2 += '<option>' + data[i].DEPARTMENT + '</option>';
-                                }
-                                $('#doctList').html(options);
-                                $('#deptList').html(options2);
-                                document.getElementById("doct_img").src = "<?php echo $IMG_PATH?>doctors/"+temp[0].IMG_PATH;//default the first index will be set
-                                document.getElementById('image_path').value = "<?php echo $IMG_PATH?>doctors/"+temp[0].IMG_PATH;//default the first index will be set
-                                document.getElementById('doctor_id').value = temp[0].DOCTOR_ID;
-                            },
-                            error: function () {
-                                alert("Unable to retrieve data now");
-                            }
-                        });
-                    }
-                });
 
-                //this function is to adjust department and img w.r.t  respective doctor name 
-                function getInfo(input) {
-                    var text = input.selectedIndex;
-                    document.getElementById("doct_img").src = "<?php echo $IMG_PATH?>doctors/"+temp[text].IMG_PATH;
-                    document.getElementById('image_path').value = "<?php echo $IMG_PATH?>doctors/"+temp[text].IMG_PATH;
-                    document.getElementById('doctor_id').value = temp[text].DOCTOR_ID;
-                    var dd = document.getElementById('deptList');
-                    for (var i = 0; i < dd.options.length; i++) {
-                        if (dd.options[i].text === temp[text].DEPARTMENT) {
-                            dd.selectedIndex = i;
-              
-                            $('.select2').select2();
-                            break;
-                        }
-                    }
-                }
+$(function () {
+    $('.select2').select2();
+});
 
-                function doconfirm()
-                {
-                    job = confirm("Are you sure to delete permanently?");
-                    if (job !== true)
-                    {
-                        return false;
-                    }
-                }
+var doctorInformation;
+function loadDoctorInformation(){
+   var doctID = $("select[name='doctor_id']").val();    
+    $.ajax({
+    type: "GET",
+    url: "<?php echo base_url(); ?>index.php?/admin/doctors/getSingleDoctorDetails/"+doctID, 
+        success: function (data) {
+            doctorInformation=JSON.parse(data);
+            fillUpdateForm();
+        }});
+}
+
+/* This function fills up the remains fileds of the form with respect to the doctor selection */ 
+function fillUpdateForm(){ 
+    /*get directory path of doctors' images stored*/    
+    var doctor_picture_directory_path = "<?php echo base_url() . "assets1/images/doctors/" ?>";
+    $('#doctor_picture').attr("src",doctor_picture_directory_path+doctorInformation[0].IMG_PATH);
+    $('#image_path').val(doctor_picture_directory_path+doctorInformation[0].IMG_PATH);
+    $("select[name=department] option:contains(" + doctorInformation[0].DEPT_NAME + ")").prop('selected', true);
+    $('#delete_btn').prop('disabled', false);
+    $('#delete_btn').css("background-color","red");
+    $('.select2').select2();
+}
+
+/*Open Modal for confirmation*/
+function openModalConfirmation(){    
+    $("#modal-danger").modal({
+      show: true
+    });
+}
+
+/*Form Submission happening after clicking modal yes button*/
+$('#form_submit').click(function(){
+    /* when the submit button in the modal is clicked, submit the form */
+    $('#doctor_delete_form').submit();
+});
 
 </script>

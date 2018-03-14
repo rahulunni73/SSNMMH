@@ -21,7 +21,7 @@
                         <span class="info-box-icon bg-aqua"><i class="fa fa-plus"></i></span>
                         <div class="info-box-content">
                             <span class="info-box-text">Create Doctors</span>
-                            <span class="info-box-number">You can create new doctors</span>
+                            <span class="text-muted">You can create new doctors</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -35,7 +35,7 @@
                         <span class="info-box-icon bg-green"><i class="fa fa-edit"></i></span>
                         <div class="info-box-content">
                             <span class="info-box-text">Edit Doctors</span>
-                            <span class="info-box-number">You can update doctors details</span>
+                            <span class="text-muted">You can update doctors details</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -50,7 +50,7 @@
 
                         <div class="info-box-content">
                             <span class="info-box-text" >Delete Doctors</span>
-                            <span class="info-box-number">You can delete doctors</span>
+                            <span class="text-muted">You can delete doctors</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -64,7 +64,7 @@
                         <span class="info-box-icon bg-red"><i class="fa fa-eye"></i></span>
                         <div class="info-box-content">
                             <span class="info-box-text">View Doctors</span>
-                            <span class="info-box-number">You can view all doctors</span>
+                            <span class="text-muted">You can view all doctors</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>

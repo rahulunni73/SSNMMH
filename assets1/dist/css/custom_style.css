@@ -1,0 +1,246 @@
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*#signup-response{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #FF0000;
+    margin-top: 20px;
+    
+     animation:signup-response 0.5s 1;
+    -webkit-animation:signup-response 0.5s 1;
+    animation-fill-mode: forwards;
+    
+    animation-delay:2s;
+    -webkit-animation-delay:1s; 
+    -webkit-animation-fill-mode: forwards;
+    
+} 
+
+@keyframes signup-response{
+    from {opacity :1;}
+    to {opacity :0;}
+}
+
+@-webkit-keyframes signup-response{
+    from {opacity :1;}
+    to {opacity :0;}
+}*/
+
+
+/*
+@keyframes fadeIn { 
+  from { opacity: 0; } 
+}
+
+.animate-flicker {
+    animation: fadeIn 5s infinite alternate;
+}
+
+
+label{
+    padding: 10px;
+    background: red; 
+    display: table;
+    color: #fff;
+     }
+
+input[type="file"] {
+    display: none;
+}
+
+
+*/
+
+.card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card {
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-clip: padding-box;
+}
+/*.card span.card-title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 200;
+    text-transform: uppercase;
+}*/
+
+.card .card-image {
+  position: relative;
+  overflow: hidden;
+  background: white;
+  
+}
+.card .card-image img {
+  border-radius: 2px 2px 0 0;
+  background-clip: padding-box;
+  position: relative;
+  z-index: 0;
+  margin: 0 auto;
+  padding: 8px;
+}
+.card .card-image span.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  padding: 0px;
+}
+.card .card-content {
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+  text-align: center;
+  background: #3c8dbc;
+  color: white;
+  padding: 4px;
+}
+.card .card-content p {
+  margin: 0;
+  color: inherit;
+}
+
+.card .card-content span.card-title {
+    font-size: 1em;
+    /*font-weight: 200;*/
+    text-transform: uppercase;
+    line-height: 12px;
+}
+
+.card .card-content p span.card-subtitle {
+    text-transform:capitalize;
+}
+
+.card .card-action {
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  padding: 16px;
+}
+.card .card-action a {
+  color: #ffab40;
+  margin-right: 16px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+.card .card-action a:hover {
+  color: #ffd8a6;
+  text-decoration: none;
+}
+
+
+
+/*.glyphicon { margin-right:5px; }
+.thumbnail
+{
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+*/
+.item.list-group-item
+{
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
+{
+    background: #E0E0E0;
+}
+
+.item.list-group-item .list-group-image
+{
+    margin-right: 10px;
+}
+.item.list-group-item .thumbnail
+{
+    margin-bottom: 0px;
+}
+.item.list-group-item .caption
+{
+    padding: 9px 9px 0px 9px;
+}
+
+.item.list-group-item:nth-of-type(odd)
+{
+    background: #eeeeee;
+}
+
+.item.list-group-item:before, .item.list-group-item:after
+{
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item img
+{
+    float: left;
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+}
+.item.list-group-item:after
+{
+    clear: both;
+}
+.list-group-item-text
+{
+    margin: 0 0 11px;
+}

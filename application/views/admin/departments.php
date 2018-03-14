@@ -1,4 +1,5 @@
 <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
             Dashboard
@@ -10,188 +11,69 @@
         </ol>
     </section>
 
-
-    <div class="row" style="margin: 0px;">
-
-        <div class="col-md-8">
-            <!-- Horizontal Form -->
-            <div class="box box-info">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Departments</h3>
-                </div>
-                <!-- /.box-header -->
-                <!-- form start -->
-                <?php
-                $attributes = array('role' => 'form', 'id' => 'department_creation_form', 'class' => 'form-horizontal', 'method' => 'post');
-                echo form_open_multipart('admin/create/addDepartment', $attributes);
-                ?>
-                <div class="box-body">
-
-                    <div class="form-group">
-                        <?php
-                        $attributes2 = array(
-                            'for' => 'dept_name',
-                            'class' => 'col-sm-2 control-label'
-                        );
-                        echo form_label('Department', $this->input->post('dept_name'), $attributes2);
-                        ?>
-                        <div class="col-sm-10">
-                            <?php
-                            $data1 = array(
-                                'name' => 'dept_name',
-                                'type' => 'text',
-                                'placeholder' => 'Department',
-                                'class' => 'form-control'
-                            );
-                            echo form_input('dept_name','', $data1);
-                            ?>
-                            <div style="color: red"><?php echo form_error('dept_name'); ?></div>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12 col-lg-6">
+                <a class="users-list-name" href="<?php echo site_url('admin/dashboard/create_departments'); ?>">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-aqua"><i class="fa fa-plus"></i></span>
+                        <div class="info-box-content">
+                            <span class="info-box-text">Create Department</span>
+                            <span class="text-muted">You can create new departments</span>
                         </div>
+                        <!-- /.info-box-content -->
                     </div>
-
-                    <div class="form-group">
-                        <?php
-                        $attributes9 = array(
-                            'for' => 'dept_description',
-                            'class' => 'col-sm-2 control-label'
-                        );
-                        echo form_label('Description', '', $attributes9);
-                        ?>
-                        <div class="col-sm-10">
-                            <?php
-                            $data4 = array(
-                                'name' => 'dept_description',
-                                'type' => 'numeric',
-                                'placeholder' => 'Description',
-                                'class' => 'form-control'
-                            );
-                            echo form_textarea('dept_description', $this->input->post('dept_description'), $data4);
-                            ?>
-                            <div style="color: red"><?php echo form_error('dept_description'); ?></div>
+                </a>
+                <!-- /.info-box -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-3 col-sm-6 col-xs-12 col-lg-6">
+                <a class="users-list-name" href="<?php echo site_url('admin/dashboard/update_departments'); ?>">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-green"><i class="fa fa-edit"></i></span>
+                        <div class="info-box-content">
+                            <span class="info-box-text">Edit Department</span>
+                            <span class="text-muted">You can update departments details</span>
                         </div>
+                        <!-- /.info-box-content -->
                     </div>
-
-                    <div class="form-group">
-                        <label for="userfile" class="col-sm-2 control-label">Dept.Image</label>
-                        <div class="col-sm-10">
-                            <input name="userfile" id="fileupload" type="file" multiple="true" onchange="readURL(this);">
-                            <div style="color: red"><?php echo form_error('uploads'); ?></div>
+                </a>    
+                <!-- /.info-box -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-3 col-sm-6 col-xs-12 col-lg-6">
+                <a class="users-list-name" href="<?php echo site_url('admin/dashboard/delete_departments'); ?>">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-yellow"><i class="fa fa-trash-o"></i></span>
+                        <div class="info-box-content">
+                            <span class="info-box-text" >Delete Deaprtment</span>
+                            <span class="text-muted">You can delete departments</span>
                         </div>
+                        <!-- /.info-box-content -->
                     </div>
-                </div>
-                <!-- /.box-body -->
-                <div class="box-footer">
-                    <button type="submit" class="btn btn-info pull-right btn-microsoft">Create Department</button>
-
-                </div>
-                <!-- /.box-footer -->
-                <?php
-                echo form_close();
-                ?>
+                </a>
+                <!-- /.info-box -->
             </div>
-            <!-- /.box -->
-        </div>
-
-        <div class="col-lg-4" class="profile_pic_container">
-            <div>
-                <img width="100%" height="100%" style=" border: 1px solid;" id="dept_img_preview" src="<?php echo base_url() . "assets1/dist/img/dept_dummy.png" ?>" alt="department image" />
-            </div>
-        </div>
-    </div><!- Row ENds--->
-
-
-
-<!-- This div is intent to display error or success status upon database operations-->
-    <div class="row">
-        <div class="col-lg-12">
-            <?php
-            $test = $this->session->flashdata('status');
-            if (isset($test)) {
-                $status_message = $this->session->flashdata('status_message');
-                if ($test === true) {
-                    echo "<div class='alert alert-success alert-dismissible'>
-                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
-               $status_message</div>";
-                } else {
-                    echo "<div class='alert alert-danger alert-dismissible'>
-                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
-               $status_message</div>";
-                }
-            }
-            ?>
-        </div>    
-    </div>
-
-
-
-
-
-<?php 
-//if no records found do not show the department section
-if ( sizeof($records) > 0 ) { ?>
-
-    <div class="row" style="margin: 5px;">
-        <div class="col-lg-12">
-
-            <div class="box box-primary">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Departments</h3>
-                    <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            <!-- /.col -->
+            <div class="col-md-3 col-sm-6 col-xs-12 col-lg-6">
+                <a class="users-list-name" href="<?php echo site_url('admin/dashboard/view_departments'); ?>">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-red"><i class="fa fa-eye"></i></span>
+                        <div class="info-box-content">
+                            <span class="info-box-text">View Department</span>
+                            <span class="text-muted">You can view all departments</span>
+                        </div>
+                        <!-- /.info-box-content -->
                     </div>
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body">
-                    <ul class="products-list product-list-in-box" id="deptList">
-                        <?php foreach ($records as $rows) {?>
-                            <li class="item" style="border-color:#E0E0E0;border-bottom: ridge; margin-bottom: 8px;background: #F5F5F5">
-                                <div style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" class="product-img"><img src='<?php echo $IMG_PATH.'departments/'.$rows->IMG_PATH  ?>' alt="Product Image"></div>
-                                <div class="product-info" style="text-transform: uppercase; font-size:medium">
-                                    <a href=""  class="product-title"><?php echo $rows->DEPT_NAME; ?></a>
-                                    <span class="label pull-right"><a  onclick="return doconfirm()" type="button"  href="<?php echo base_url() . "index.php?/admin/delete/removeDepartment/$rows->DEPT_ID/$rows->IMG_PATH " ?>"  class="btn  btn-danger" style="text-transform: capitalize; padding:3px; box-shadow: 3px 3px grey;" >Remove</a></span>
-                                    <span style="text-transform: capitalize;"class="product-description"><?php echo $rows->DESCRIPTIONS;?></span>
-                                </div>
-                            </li>
-                        <?php } ?>
-
-                        <!-- /.item -->
-                    </ul>
-                </div>
-                <!-- /.box-body -->
+                </a>
+                <!-- /.info-box -->
             </div>
-            <!-- /.box -->
+            <!-- /.col -->
         </div>
-    </div>
-
-<?php } ?>
-
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
 </div>
-
-<!-- jQuery 3 -->
-<script src="<?php echo base_url() . "assets1/bower_components/jquery/dist/jquery.min.js" ?>"></script>
-<!-- Page script -->
-<script>
-                                        function doconfirm(input) {
-                                            job = confirm("Are you sure to delete permanently?");
-                                            if (job != true)
-                                            {
-                                                return false;
-                                            }
-                                        }
-
-                                        function readURL(input) {
-                                            if (input.files && input.files[0]) {
-                                                var reader = new FileReader();
-                                                reader.onload = function (e) {
-                                                    $('#dept_img_preview')
-                                                            .attr('src', e.target.result)
-                                                            .width(400)
-                                                            .height(250);
-                                                };
-                                                reader.readAsDataURL(input.files[0]);
-                                            }
-                                        }
-
-</script>
+<!-- /.content-wrapper -->

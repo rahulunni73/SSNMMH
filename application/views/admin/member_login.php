@@ -7,6 +7,30 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets1/customassets/css/style_login.css">
 </head>
 <body>
+
+    <div class="row">
+
+        <div class="col-lg-offset-2 col-lg-8 col-lg-offset-8" style="padding-top: 50px">
+            <?php
+            $test = $this->session->flashdata('status');
+            if (isset($test)) {
+                $status_message = $this->session->flashdata('status_message');
+                if ($test === true) {
+                    echo "<div  id='alert-response' class='animate-flicker alert alert-success alert-dismissible'>
+                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+               $status_message</div>";
+                } else {
+                    echo "<div class='alert alert-danger alert-dismissible'>
+                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+               $status_message</div>";
+                }
+            }
+            ?>
+        </div>    
+
+    </div>
+
+
     <div class='box'>
         <div class='box-form'>
             <div class='box-login-tab'></div>
@@ -18,7 +42,7 @@
                     <button onclick="openLoginInfo();" class='b b-form i i-more' title=''></button>
                     <?php
                     $attributes = array('method' => 'post');
-                    echo form_open('admin/main/validate_member', $attributes);
+                    echo form_open('admin/users/validateUser', $attributes);
                     ?> 
                     <p class='field'>
                         <?php
@@ -85,7 +109,7 @@
             <div class='line-wh'></div>
             <button onclick="" class='b-support' title='Forgot Password?'> Forgot Password?</button>
             <div class='line-wh'></div>
-            <a href="<?php echo site_url('admin/main/load_register_view'); ?>" class='b-cta' title='Sign up now!'> CREATE ACCOUNT</a>
+            <a href="<?php echo site_url('admin/users/view_registration'); ?>" class='b-cta' title='Sign up now!'> CREATE ACCOUNT</a>
         </div>
     </div>
     <script  src="<?php echo base_url(); ?>assets1/bower_components/jquery/dist/jquery.min.js"></script>

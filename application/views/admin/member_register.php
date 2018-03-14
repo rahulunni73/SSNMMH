@@ -36,8 +36,7 @@
 
     </head>
 
-    <body class="blue">
-
+    <body class="blue">        
 
         <div id="login-page" class="row">
             <div class="col s12 z-depth-6 card-panel">
@@ -45,13 +44,12 @@
 
                 <?php
                 $attributes = array('clsss' => 'login-form', 'id' => 'regform');
-                echo form_open('admin/main/register_member', $attributes);
+                echo form_open_multipart('admin/users/userRegistration', $attributes);
                 ?>
 
                 <div class="row">
                     <div class="input-field col s12 center">
-                        <img src="http://w3lessons.info/logo.png" alt="" class="responsive-img valign profile-image-login">
-                        <p class="center login-form-text">Registration</p>
+                        <img id="admin_picture" src="<?php echo base_url(). "assets1/dist/img/admin.jpg" ?>" alt="" class="responsive-img valign profile-image-login">
                     </div>
                 </div>
 
@@ -143,10 +141,15 @@
                     </div>
                     <?php echo form_error('password-again'); ?>
                 </div>
+                <div class="row">
+                    <div class="form-group">
+                    <input name="userfile" id="fileupload" type="file" multiple="true" onchange="showPreviewImage(this);">
+                    <div style="color: red"><?php echo form_error('uploads'); ?></div>
+                    </div> 
+                </div>
 
                 <div class="row">
                     <div class="input-field col s12" style="color: red">
-
                         <?php
                         $data = array(
                             'type' => 'submit',
@@ -156,7 +159,7 @@
                         ?>
                     </div>
                     <div class="input-field col s12">
-                        <p class="margin center medium-small sign-up">Already have an account? <a href="<?php echo site_url('admin/main/index'); ?>">Login</a></p>
+                        <p class="margin center medium-small sign-up">Already have an account? <a href="<?php echo site_url('admin/users/index'); ?>">Login</a></p>
                     </div>
                 </div>
 
@@ -169,6 +172,19 @@
 
         <script  src="<?php echo base_url(); ?>assets1/bower_components/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>assets1/customassets/js/register_script.js"></script>
+        <script type="text/javascript">
+            //show selected doctor image 
+function showPreviewImage(input){
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#admin_picture')
+            .attr('src', e.target.result);
+            };
+        reader.readAsDataURL(input.files[0]);
+    }    
+}
+        </script>
     </body>
 
 </html>
