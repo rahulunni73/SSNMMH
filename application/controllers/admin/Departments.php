@@ -1,4 +1,5 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
 /**
  * Description of Create
  *  
@@ -24,7 +25,7 @@ class Departments extends CI_Controller {
         if (!$this->setupFormValidationDepartment()) {
             $this->department_view();//if redirection used, form validation errors not shown
         } else {
-            $result = setUpImageUpload(400,250, 'departments',$_FILES['userfile']['name']); //pass the dimensions of the image and file name
+            $result = setUpImageUpload(400,251, 'departments',$_FILES['userfile']['name']); //pass the dimensions of the image and file name
             if (!$result['status']) {
                 $data = array('main_content' => 'create_departments', 'status_message' => $result['error']);
                 //$this->load->view('admin/includes/template2', $data);

@@ -125,13 +125,13 @@ echo form_open_multipart('admin/doctors/updateDoctorDetails', $form_attributes);
                             );
 
                             $days = array(
-                                'MONDAY' => 'MONDAY',
-                                'TUESDAY' => 'TUESDAY',
-                                'WEDNESDAY' => 'WEDNESDAY',
-                                'THURSDAY' => 'THURSDAY',
-                                'FRIDAY' => 'FRIDAY',
-                                'SATURDAY' => 'SATURDAY',
-                                'SUNDAY' => 'SUNDAY'
+                                'MON' => 'MONDAY',
+                                'TUE' => 'TUESDAY',
+                                'WED' => 'WEDNESDAY',
+                                'THU' => 'THURSDAY',
+                                'FRI' => 'FRIDAY',
+                                'SAT' => 'SATURDAY',
+                                'SUN' => 'SUNDAY'
                             );
                             echo form_dropdown('opdays[]', $days, '', $op_days_attributes);?>
                             <div style="color: red"><?php echo form_error('opdays[]'); ?></div>

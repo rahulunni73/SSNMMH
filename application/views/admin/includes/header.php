@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets1/bower_components/font-awesome/css/font-awesome.min.css">
         <!-- Ionicons -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets1/bower_components/Ionicons/css/ionicons.min.css">
+          <link rel="stylesheet" href="<?php echo base_url(); ?>assets1/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" >
+          <link rel="stylesheet" href="<?php echo base_url(); ?>assets1/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets1/bower_components/select2/dist/css/select2.min.css">
         <!-- Theme style -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets1/dist/css/AdminLTE.min.css">
@@ -119,8 +121,13 @@
                                 <li class=""><a href="<?php echo site_url('admin/dashboard/doctors'); ?>"><i class="fa fa-circle-o"></i>Doctors</a></li>
                                 <li><a href="<?php echo site_url('admin/dashboard/departments'); ?>"><i class="fa fa-circle-o"></i>Departments</a></li>
                                 <li><a href="<?php echo site_url('admin/dashboard/services'); ?>"><i class="fa fa-circle-o"></i>Service</a></li>
+                                <li><a href="<?php echo site_url('admin/dashboard/news'); ?>"><i class="fa fa-circle-o"></i>News</a></li>
+                                <li><a href="<?php echo site_url('admin/dashboard/gallery'); ?>"><i class="fa fa-circle-o"></i>Gallery</a></li>
+                                <li><a href="<?php echo site_url('admin/dashboard/insurance'); ?>"><i class="fa fa-circle-o"></i>Insurance</a></li>
+
                             </ul>
                         </li>
+
                     </ul>
                 </section>
                 <!-- /.sidebar -->

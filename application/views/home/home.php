@@ -48,7 +48,7 @@
         <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="box">
                 <i class="fa fa-user-md"></i>
-                <h4>Qualified Doctors</h4>
+                <h4>Doctors</h4>
                 <p>
                 </p>
                 <a href="<?php echo site_url('home/doctors'); ?>" class="btn btn-transparent">Read More</a>
@@ -59,7 +59,7 @@
         <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="box">
                 <i class="fa fa-stethoscope"></i>
-                <h4>Departments</h4>
+                <h4>Specialities</h4>
                 <p>
                 </p>
                 <a href="<?php echo site_url('home/departments')?>" class="btn btn-transparent">Read More</a>
@@ -70,10 +70,10 @@
         <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="box">
                 <i class="fa fa-flask"></i>
-                <h4>Specialities</h4>
+                <h4>Facilities</h4>
                 <p>
                 </p>
-                <a href="<?php echo site_url('home/departments')?>" class="btn btn-transparent">Read More</a>
+                <a href="<?php echo site_url('home/services')?>" class="btn btn-transparent">Read More</a>
             </div>
         </div>
         <!-- Box #3 Ends -->
@@ -92,7 +92,7 @@
     </div>
     <!-- Notification Boxes Ends -->
     <!-- Welcome Section Starts -->
-    <section class="welcome-area">
+<!--     <section class="welcome-area">
         <div class="row">
             <div class="col-md-6 col-xs-12">
                 <h2 class="main-heading1 lite">We Offer Fast &amp; Reliable</h2>
@@ -108,12 +108,16 @@
                 <img src="images/image1.jpg" alt="image" class="img-responsive img-style1">
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Welcome Section Ends -->
 </div>
 <!-- Main Container Ends -->
+
+
+
 <!-- About Featured Section Starts -->
-<section class="about-featured parallax">
+<section class="parallax about-featured ">
+    <div>
     <div class="container">
         <h3 class="lite">Get Well Soon</h3>
         <h2 class="lite">Our Hosptial <span>Services</span></h2>
@@ -176,6 +180,7 @@
         </ul>
         <p class="text-center"><a href="#" class="btn btn-transparent text-uppercase">Make an Appointment<i class="fa fa-chevron-right"></i></a></p>
     </div>
+</div>
 </section>
 <!-- About Featured Section Starts -->
 <!-- Main Container Starts -->
@@ -183,153 +188,149 @@
     <!-- Medical Services Section Ends -->
     <!-- Content Starts -->
     <div class="row">
-        <!-- Latest News Section Starts -->
-        <section class="col-md-8 col-xs-12">
-            <div class="main-block1">
-                <h2 class="main-heading1 lite">Latest</h2>
-                <h2 class="main-heading2">Tips &amp; News</h2>
-                <!-- Latest News Carousel Starts -->
-                <div id="news-carousel" class="news-carousel carousel slide" data-ride="carousel">
-                    <!-- Wrapper for Slides Starts -->
-                    <div class="carousel-inner">
-                        <!-- Slide #1 Starts -->
-                        <div class="item active">
-                            <div class="row">
-                                <div class="col-sm-6 col-xs-12">
-                                    <!-- News Post Starts -->
-                                    <div class="news-post-box">
-                                        <img src="<?php echo base_url(); ?>assets/images/news/news-thumb-img1.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-                                        <div class="inner">
-                                            <h5>
-                                                <a href="#">Latest News Post Heading</a>
-                                            </h5>
-                                            <ul class="list-unstyled list-inline post-meta">
-                                                <li>
-                                                    <i class="fa fa-calendar"></i> Sept 25, 2015
-                                                </li>
-                                                <li><a href="#">
-                                                        <i class="fa fa-comments-o"></i> 10
-                                                    </a></li>
-                                            </ul>
-                                            <p>
-                                                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker....
-                                            </p>
-                                            <a href="#" class="btn btn-secondary">
-                                                <i class="fa fa-arrow-circle-right"></i>
-                                                Read More
+<!-- Latest News Section Starts -->
+<section class="col-md-8 col-xs-12">
+    <div class="main-block1">
+        <h2 class="main-heading1 lite">Latest</h2>
+        <h2 class="main-heading2">News</h2>
+        <!-- Latest News Carousel Starts -->
+        <div id="news-carousel" class="news-carousel carousel slide" data-ride="carousel">
+            <!-- Wrapper for Slides Starts -->
+            <div class="carousel-inner">
+                <!-- Slide #1 Starts -->
+                <div class="item active">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                            <!-- News Post Starts -->
+                            <div class="news-post-box">
+                                <img src="<?php echo $IMG_PATH.'news/'.$latest_news[0]->IMG_PATH ?>" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
+                                <div class="inner">
+                                    <h5><a href="#"><?php echo $latest_news[0]->NEWS_TITLE; ?></a></h5>
+                                    <ul class="list-unstyled list-inline post-meta">
+                                        <li>
+                                            <i class="fa fa-calendar"></i><?php echo $latest_news[0]->DATE; ?>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-map-marker"></i><?php echo $latest_news[0]->NEW_VENUE; ?>
                                             </a>
-                                        </div>
-                                    </div>
-                                    <!-- News Post Ends -->
-                                </div>
-                                <div class="col-sm-6 col-xs-12">
-                                    <!-- News Post Starts -->
-                                    <div class="news-post-box">
-                                        <img src="<?php echo base_url(); ?>assets/images/news/news-thumb-img2.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-                                        <div class="inner">
-                                            <h5>
-                                                <a href="#">Latest Tip Post Heading</a>
-                                            </h5>
-                                            <ul class="list-unstyled list-inline post-meta">
-                                                <li>
-                                                    <i class="fa fa-calendar"></i> Sept 15, 2015
-                                                </li>
-                                                <li><a href="#">
-                                                        <i class="fa fa-comments-o"></i> 10
-                                                    </a></li>
-                                            </ul>
-                                            <p>
-                                                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker....
-                                            </p>
-                                            <a href="#" class="btn btn-secondary">
-                                                <i class="fa fa-arrow-circle-right"></i> 
-                                                Read More
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- News Post Ends -->
+                                        </li>
+                                    </ul>
+                                    <p>
+
+                                    </p>
+                                    <a href="<?php echo site_url('home/news') ?>" class="btn btn-secondary">
+                                        <i class="fa fa-arrow-circle-right"></i> Read More
+                                    </a>
                                 </div>
                             </div>
+                            <!-- News Post Ends -->
                         </div>
-                        <!-- Slide #1 Ends -->
-                        <!-- Slide #2 Starts -->
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-sm-6 col-xs-12">
-                                    <!-- News Post Starts -->
-                                    <div class="news-post-box">
-                                        <img src="<?php echo base_url(); ?>assets/images/news/news-thumb-img1.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-                                        <div class="inner">
-                                            <h5>
-                                                <a href="#">Latest News Post Heading</a>
-                                            </h5>
-                                            <ul class="list-unstyled list-inline post-meta">
-                                                <li>
-                                                    <i class="fa fa-calendar"></i> Sept 25, 2017
-                                                </li>
-                                                <li><a href="#">
-                                                        <i class="fa fa-comments-o"></i> 10
-                                                    </a></li>
-                                            </ul>
-                                            <p>
-                                                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker....
-                                            </p>
-                                            <a href="#" class="btn btn-secondary">
-                                                <i class="fa fa-arrow-circle-right"></i>
-                                                Read More
+                        <div class="col-sm-6 col-xs-12">
+                            <!-- News Post Starts -->
+                            <div class="news-post-box">
+                                <img src="<?php echo $IMG_PATH.'news/'.$latest_news[1]->IMG_PATH ?>" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
+                                <div class="inner">
+                                    <h5><a href="#"><?php echo $latest_news[1]->NEWS_TITLE; ?></a></h5>
+                                    <ul class="list-unstyled list-inline post-meta">
+                                        <li>
+                                            <i class="fa fa-calendar"></i><?php echo $latest_news[1]->DATE; ?>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-map-marker"></i><?php echo $latest_news[1]->NEW_VENUE; ?>
                                             </a>
-                                        </div>
-                                    </div>
-                                    <!-- News Post Ends -->
-                                </div>
-                                <div class="col-sm-6 col-xs-12">
-                                    <!-- News Post Starts -->
-                                    <div class="news-post-box">
-                                        <img src="<?php echo base_url(); ?>assets/images/news/news-thumb-img2.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-                                        <div class="inner">
-                                            <h5>
-                                                <a href="#">Latest Tip Post Heading</a>
-                                            </h5>
-                                            <ul class="list-unstyled list-inline post-meta">
-                                                <li>
-                                                    <i class="fa fa-calendar"></i> Sept 15, 2015
-                                                </li>
-                                                <li><a href="#">
-                                                        <i class="fa fa-comments-o"></i> 10
-                                                    </a></li>
-                                            </ul>
-                                            <p>
-                                                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker....
-                                            </p>
-                                            <a href="#" class="btn btn-secondary">
-                                                <i class="fa fa-arrow-circle-right"></i> 
-                                                Read More
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- News Post Ends -->
+                                        </li>
+                                    </ul>
+                                    <p>
+
+                                    </p>
+                                    <a href="<?php echo site_url('home/news') ?>" class="btn btn-secondary">
+                                        <i class="fa fa-arrow-circle-right"></i> Read More
+                                    </a>
                                 </div>
                             </div>
+                            <!-- News Post Ends -->
                         </div>
-                        <!-- Slide #2 Ends -->
                     </div>
-                    <!-- Wrapper for Slides Ends -->
-                    <!-- Controls Starts -->
-                    <a class="left carousel-control" href="#news-carousel" role="button" data-slide="prev">
-                        <span class="fa fa-angle-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#news-carousel" role="button" data-slide="next">
-                        <span class="fa fa-angle-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                    <!-- Controls Ends -->
                 </div>
-                <!-- Latest News Carousel Ends -->
+                <!-- Slide #1 Ends -->
+                <!-- Slide #2 Starts -->
+                <div class="item">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                            <!-- News Post Starts -->
+                            <div class="news-post-box">
+                                <img src="<?php echo $IMG_PATH.'news/'.$latest_news[2]->IMG_PATH ?>" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
+                                <div class="inner">
+                                    <h5><a href="#"><?php echo $latest_news[2]->NEWS_TITLE; ?></a></h5>
+                                    <ul class="list-unstyled list-inline post-meta">
+                                        <li>
+                                            <i class="fa fa-calendar"></i><?php echo $latest_news[2]->DATE; ?>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-map-marker"></i><?php echo $latest_news[2]->NEW_VENUE; ?>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p>
+
+                                    </p>
+                                    <a href="<?php echo site_url('home/news') ?>" class="btn btn-secondary">
+                                        <i class="fa fa-arrow-circle-right"></i> Read More
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- News Post Ends -->
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <!-- News Post Starts -->
+                            <div class="news-post-box">
+                                <img src="<?php echo $IMG_PATH.'news/'.$latest_news[3]->IMG_PATH ?>" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
+                                <div class="inner">
+                                    <h5><a href="#"><?php echo $latest_news[3]->NEWS_TITLE; ?></a></h5>
+                                    <ul class="list-unstyled list-inline post-meta">
+                                        <li>
+                                            <i class="fa fa-calendar"></i><?php echo $latest_news[3]->DATE; ?>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-map-marker"></i><?php echo $latest_news[3]->NEW_VENUE; ?>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p>
+
+                                    </p>
+                                    <a href="<?php echo site_url('home/news') ?>" class="btn btn-secondary">
+                                        <i class="fa fa-arrow-circle-right"></i> Read More
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- News Post Ends -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide #2 Ends -->
             </div>
-        </section>
-        <!-- Latest News Section Ends -->
-        <!-- Medical Department aside Starts -->
+            <!-- Wrapper for Slides Ends -->
+            <!-- Controls Starts -->
+            <a class="left carousel-control" href="#news-carousel" role="button" data-slide="prev">
+                <span class="fa fa-angle-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#news-carousel" role="button" data-slide="next">
+                <span class="fa fa-angle-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            <!-- Controls Ends -->
+        </div>
+        <!-- Latest News Carousel Ends -->
+    </div>
+</section>
+<!-- Medical Department aside Starts -->
+ 
         <aside class="col-md-4 col-xs-12">
             <div class="main-block1">
                 <h2 class="main-heading1 lite">Medical</h2>
@@ -343,13 +344,13 @@
                             <h5 class="panel-title">
                                 <i class="icon fa fa-medkit"></i>
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                                    Primary Health Care
+                                    EMERGENCY
                                 </a>
                             </h5>
                         </div>
                         <!-- Panel Heading Ends -->
                         <!-- Panel Body Starts -->
-                        <div id="collapse1" class="panel-collapse collapse in">
+                        <div id="collapse1" class="panel-collapse collapse"><!--provide in class to open accordian by default--> 
                             <div class="panel-body">
                                 <p>
                                     Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions ...
@@ -367,7 +368,7 @@
                             <h5 class="panel-title">
                                 <i class="icon fa fa-user-md"></i>
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-                                    Diagnosis With Precise
+                                    CARDIOLOGY
                                 </a>
                             </h5>
                         </div>
@@ -391,7 +392,7 @@
                             <h5 class="panel-title">
                                 <i class="icon fa fa-scissors"></i>
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                                    Major Surgery
+                                    INTERNAL MEDICINE
                                 </a>
                             </h5>
                         </div>
@@ -415,7 +416,7 @@
                             <h5 class="panel-title">
                                 <i class="icon fa fa-wheelchair"></i>
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-                                    Outpatient Rehabilitation
+                                    NEUROLOGY
                                 </a>
                             </h5>
                         </div>
@@ -439,7 +440,7 @@
                             <h5 class="panel-title">
                                 <i class="icon fa fa-heartbeat"></i>
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
-                                    Cardiac Clinic
+                                    GASTROENTEROLOGY
                                 </a>
                             </h5>
                         </div>
@@ -463,7 +464,7 @@
                             <h5 class="panel-title">
                                 <i class="icon fa fa-stethoscope"></i>
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
-                                    Ophthalmology
+                                    OPHTHALMOLOGY
                                 </a>
                             </h5>
                         </div>
@@ -487,7 +488,70 @@
                             <h5 class="panel-title">
                                 <i class="icon fa fa-ambulance"></i>
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
-                                    24x7 Ambulance 
+                                    OBSTETRIC & GYNECOLOGY
+                                </a>
+                            </h5>
+                        </div>
+                        <!-- Panel Heading Ends -->
+                        <!-- Panel Body Starts -->
+                        <div id="collapse7" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>
+                                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions ...
+                                </p>
+                                <a href="#" class="btn btn-sm btn-transparent inverse">Details</a>
+                            </div>
+                        </div>
+                        <!-- Panel Body Ends -->
+                                            <div class="panel">
+                        <!-- Panel Heading Starts -->
+                        <div class="panel-heading">
+                            <h5 class="panel-title">
+                                <i class="icon fa fa-ambulance"></i>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                                    PEDIATRICS
+                                </a>
+                            </h5>
+                        </div>
+                        <!-- Panel Heading Ends -->
+                        <!-- Panel Body Starts -->
+                        <div id="collapse7" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>
+                                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions ...
+                                </p>
+                                <a href="#" class="btn btn-sm btn-transparent inverse">Details</a>
+                            </div>
+                        </div>
+                        <!-- Panel Body Ends -->
+                                            <div class="panel">
+                        <!-- Panel Heading Starts -->
+                        <div class="panel-heading">
+                            <h5 class="panel-title">
+                                <i class="icon fa fa-ambulance"></i>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                                    DENTISTRY
+                                </a>
+                            </h5>
+                        </div>
+                        <!-- Panel Heading Ends -->
+                        <!-- Panel Body Starts -->
+                        <div id="collapse7" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>
+                                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions ...
+                                </p>
+                                <a href="#" class="btn btn-sm btn-transparent inverse">Details</a>
+                            </div>
+                        </div>
+                        <!-- Panel Body Ends -->
+                    <div class="panel">
+                        <!-- Panel Heading Starts -->
+                        <div class="panel-heading">
+                            <h5 class="panel-title">
+                                <i class="icon fa fa-ambulance"></i>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                                   DERMATOLOGY
                                 </a>
                             </h5>
                         </div>
@@ -515,69 +579,7 @@
     <!-- Medical Services Section Starts -->
     <section class="medical-services">
     </section>
-
-    <section id="carousel" class="testi">    				
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>
-                    <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
-                        <!-- Carousel indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#fade-quote-carousel" data-slide-to="0"></li>
-                            <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
-                            <li data-target="#fade-quote-carousel" data-slide-to="2" class="active"></li>
-                            <li data-target="#fade-quote-carousel" data-slide-to="3"></li>
-                            <li data-target="#fade-quote-carousel" data-slide-to="4"></li>
-                            <li data-target="#fade-quote-carousel" data-slide-to="5"></li>
-                        </ol>
-                        <!-- Carousel items -->
-                        <div class="carousel-inner">
-                            <div class="item">
-                                <div class="profile-circle" style="background-color: rgba(0,0,0,.2);"></div>
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-                                </blockquote>	
-                            </div>
-                            <div class="item">
-                                <div class="profile-circle" style="background-color: rgba(77,5,51,.2);"></div>
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-                                </blockquote>
-                            </div>
-                            <div class="active item">
-                                <div class="profile-circle" style="background-color: rgba(145,169,216,.2);"></div>
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-                                </blockquote>
-                            </div>
-                            <div class="item">
-                                <div class="profile-circle" style="background-color: rgba(77,5,51,.2);"></div>
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-                                </blockquote>
-                            </div>
-                            <div class="item">
-                                <div class="profile-circle" style="background-color: rgba(77,5,51,.2);"></div>
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-                                </blockquote>
-                            </div>
-                            <div class="item">
-                                <div class="profile-circle" style="background-color: rgba(77,5,51,.2);"></div>
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>							
-            </div>
-        </div>
-    </section>
-
-
-
+    <!-- Medical Services Section Ends -->
 
     <!-- Book Appointment Box Starts -->
     <div class="book-appointment-box">
@@ -599,8 +601,26 @@
     <!-- Book Appointment Box Ends -->
 </div>
 <!-- Main Container Ends -->
-<div id="preloader">
-  <div id="status">&nbsp;</div>
+ <div id="preloader" style="background: yellow;" hidden="true">
+  <div id="status"><img src="<?php echo base_url();?>assets1/images/users/guruphoto.png"></div>
+</div> 
+
+<!-- Modal -->
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Notice</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
-
-

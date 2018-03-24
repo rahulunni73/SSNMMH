@@ -1,4 +1,5 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -7,40 +8,40 @@
  */
 
 class Comments extends CI_Controller {
-
     function __construct() {
         parent::__construct();
         $this->load->model('admin/admin_model');
     }
 
-    public function pushFeedback() {
+    public function index(){}
 
-        if (!$this->commentFormValidation()) {
+    public function pushFeedback() {
+      if (!$this->commentFormValidation()) {
             $data = array('main_content' => 'home/contact', 'contact' => 'active');
             $this->load->view('home/includes/common_template', $data);
         } else {
-            $values = $this->get_form_values_contacts();
+            $values = $this->getFormValuesContacts();
             $this->insert_to_feedback($values);
         }
     }
 
-    public function newsLetterSignup() {
+    public function newsLetter() {
         $name = $this->input->post("name");
         $email = $this->input->post("email");
         $insert = $this->admin_model->newsLetterSignup($name, $email);
         if (!$insert) {
             echo json_encode(array('status' => 'Ooops!! something went wrong'));
         } else {
-            echo json_encode(array('status' => 'Congratulations!!'));
+            echo json_encode(array('status' => 'Thank You!!'));
         }
     }
 
     public function commentFormValidation() {
-        $this->form_validation->set_rules('name', 'Name', 'trim|required');
-        $this->form_validation->set_rules('email', 'Email', 'trim|required');
-        $this->form_validation->set_rules('phone', 'Phone', 'trim|required');
-        $this->form_validation->set_rules('subject', 'Subject', 'trim|required');
-        $this->form_validation->set_rules('comments', 'Comments', 'trim|required');
+        $this->form_validation->set_rules('cus_name', 'Name', 'trim|required');
+        $this->form_validation->set_rules('cus_email', 'Email', 'trim|required');
+        $this->form_validation->set_rules('cus_phone', 'Phone', 'trim|required');
+        $this->form_validation->set_rules('cus_subject', 'Subject', 'trim|required');
+        $this->form_validation->set_rules('cus_comments', 'Comments', 'trim|required');
         if ($this->form_validation->run() === FALSE) {
             return false;
         } else {
@@ -49,12 +50,12 @@ class Comments extends CI_Controller {
     }
 
     //obtaining form values for Dcoctor
-    public function get_form_values_contacts() {
-        $values = array('name' => $this->input->post('name'),
-            'email' => $this->input->post('email'),
-            'phone' => $this->input->post('phone'),
-            'subject' => $this->input->post('subject'),
-            'comments' => $this->input->post('comments')
+    public function getFormValuesContacts() {
+        $values = array('name' => $this->input->post('cus_name'),
+            'email' => $this->input->post('cus_email'),
+            'phone' => $this->input->post('cus_phone'),
+            'subject' => $this->input->post('cus_subject'),
+            'comments' => $this->input->post('cus_comments')
         );
         return $values;
     }
@@ -71,5 +72,4 @@ class Comments extends CI_Controller {
             redirect('home/contact', 'refresh');
         }
     }
-
 }

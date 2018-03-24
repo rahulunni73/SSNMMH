@@ -81,25 +81,31 @@
                                 }
                                 ?>"><a href="<?php echo site_url('home/about') ?>">About</a></li>
                                 <li class="<?php
-                                if (isset($service)) {
-                                    echo $service;
+                                if (isset($doct_active)) {
+                                    echo $doct_active;
                                 }
-                                ?>"><a href="<?php echo site_url('home/services') ?>">Services</a></li>
+                                ?>"><a href="<?php echo site_url('home/doctors') ?>">Doctors</a></li>
                                 <li class="dropdown" class="<?php
-                                if (isset($department)) {
-                                    echo $department;
+                                if (isset($dept_active)) {
+                                    echo $dept_active;
                                 }
-                                ?>"><a class="dropdown-toggle" data-toggle="dropdown">Departments</a>
+                                ?>"><a class="dropdown-toggle" data-toggle="dropdown">Specialties</a>
                                     <ul class="dropdown-menu" role="menu">
                                         <li><a href="<?php echo site_url('home/departments') ?>">Departments</a></li>
-                                        <li><a href="<?php echo site_url('home/doctors') ?>">Doctors</a></li>
+                                        <li><a href="<?php echo site_url('home/services') ?>">Services</a></li>
+                                        <li><a href="<?php echo site_url('home/insurance')?>">Insurance</a></li>
                                     </ul>
                                 </li>
-                                <li class="<?php
+                                <li class="dropdown" class=class="<?php
                                 if (isset($gallery)) {
                                     echo $gallery;
                                 }
-                                ?>"><a href="<?php echo site_url('home/gallery') ?>">Gallery</a></li>
+                                ?>"><a class="dropdown-toggle" data-toggle="dropdown">News</a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="<?php echo site_url('home/news') ?>">News</a></li>
+                                        <li><a href="<?php echo site_url('home/gallery') ?>">Gallery</a></li>
+                                    </ul>
+                                </li>
                                 <li class="<?php
                                 if (isset($contact)) {
                                     echo $contact;

@@ -1,4 +1,4 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -19,6 +19,9 @@ class Dashboard extends CI_Controller {
         $this->load->model('admin/DoctorsModel');
         $this->load->model('admin/DepartmentsModel');
         $this->load->model('admin/ServicesModel');
+        $this->load->model('admin/NewsModel');
+        $this->load->model('admin/InsuranceModel');
+        
     }
 
     public function index() {
@@ -117,10 +120,49 @@ class Dashboard extends CI_Controller {
 
 
 
+    public function gallery() {
+        $data = array('main_content' => 'admin/gallery_uploads');
+        $this->load->view('admin/includes/template2', $data);
 
+    }
 
+    public function news() {
+        $data = array('main_content' => 'admin/news');
+        $this->load->view('admin/includes/template2', $data);
 
-
+    }
     
+
+    public function create_news() {
+        $data = array('main_content' => 'admin/create_news');
+        $this->load->view('admin/includes/template2', $data);
+
+    }
+
+        public function remove_news() {
+        $data = array('main_content' => 'admin/delete_news','_news'=>$this->NewsModel->getNews());
+        $this->load->view('admin/includes/template2', $data);
+
+    }
+
+
+    public function create_insurance() {
+        $data = array('main_content' => 'admin/create_insurance');
+        $this->load->view('admin/includes/template2', $data);
+    }
+
+
+        public function remove_insurance() {
+        $data = array('main_content' => 'admin/delete_insurance','insur_details'=>$this->InsuranceModel->getInsurance());
+        $this->load->view('admin/includes/template2', $data);
+
+    }
+
+
+    public function insurance() {
+        $data = array('main_content' => 'admin/insurance_home');
+        $this->load->view('admin/includes/template2', $data);
+
+}    
 
 }

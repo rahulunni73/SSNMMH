@@ -19,7 +19,7 @@
 <!-- Main Container Starts -->
 <div class="container main-container medical-services">
 
-    <div class="row">
+<!--     <div class="row">
 
         <h4 style="text-align: center; text-transform: uppercase"><b>
                 Insurance Companies Who Have Tie Up With Our Hospital</b>
@@ -95,12 +95,80 @@
         </div>
 
     </div>
+ -->
+
+
+
+
+<div class="row">
+  
+
+ <?php foreach ($insur_details as $rows) {?>
+  <div class="col-sm-6 mycard-1" style="margin: 16px 0px; padding-right: 16px; ">
+    <div class="card">
+        <img class="card-img-top center-block" src="<?php echo $IMG_PATH1.'insurance/'.$rows->IMG_PATH ?>" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><?php echo $rows->INSUR_NAME ?></h5>
+        <p class="card-text"></p>
+        <div class="pull-right" style="margin: 8px 0px;">
+            <a href="<?php echo site_url('home/insurance_profile').'/'.$rows->INSUR_ID;?>" class="btn btn-primary">Readmore</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<?php } ?>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 </div>
 <!-- Main Container Ends -->
+<!-- Modal -->
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Notice</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

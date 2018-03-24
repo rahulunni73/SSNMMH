@@ -67,13 +67,14 @@
                     <h4>Signup Newsletter</h4>
                     <form action="#" class="newsletter">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name">
+                            <input type="text" id="s_name" class="form-control" placeholder="Your Name">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Enter your Email Address">
+                            <input type="email" id="s_email" class="form-control" placeholder="Enter your Email Address">
                         </div>
-                        <button type="submit" class="btn btn-lg btn-block btn-secondary">Submit</button>
-                    </form>
+                    </form> 
+                        <button id="send" class="btn btn-lg btn-block btn-secondary">Submit</button>
+
                 </div>
                 <!-- Signup Newsletter Ends -->
             </div>
@@ -103,31 +104,45 @@
 <script src="<?php echo base_url(); ?>assets/js/plugins/shuffle/jquery.shuffle.modernizr.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/custom.js"></script>
 <script>
-    $(function () {
-        //news letter signup
+
+//news letter signup
         $("#send").click(function () {
             var base_url = "<?php echo base_url(); ?>";
-            $.ajax({
+            
+        if( ($("#s_name").val() == '' ) || ($("#s_email").val() == '' ) ){
+                $("#Modal").find(".modal-body" ).text("Give Name and Email");
+                    $("#Modal").modal({show: true});
+        }else{
+            
+            if(validateEmail($("#s_email").val())){
+                $.ajax({
                 type: "POST",
-                url: base_url + "index.php?/comments/newsLetterSignup",
-                data: {name: $("#name").val(), email: $("#email").val()},
-                dataType: "text",
-                cache: false,
+                url: base_url + "index.php/comments/newsLetter",
+                data: {"name": $("#s_name").val(), "email": $("#s_email").val()},
+                dataType: "json",
                 success:
                         function (data) {
-                            var test = JSON.parse(data);
-                            alert(test.status);
-                            $("#name").val('');
-                            $("#email").val('');
+                            $("#Modal").find( ".modal-body" ).text(data.status +"for News Letter Signup");
+                            $("#Modal").modal({show: true});
                         },
                 error: function (data) {
-                    var test = JSON.parse(data);
-                    alert(test.status);
-                    $("#name").val('');
-                    $("#email").val('');
+                    $("#Modal").find( ".modal-body" ).text("News Letter Signup Failed");
+                    $("#Modal").modal({show: true});
                 }
             });
-            return false;
-        });
-    });
+            }else{
+              $("#Modal").find(".modal-body" ).text("Give a valid email address");
+                    $("#Modal").modal({show: true});  
+            }
+        }
+
+});  
+
+/* jQuery Validate Emails with Regex */
+function validateEmail(Email) {
+    var pattern = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    return $.trim(Email).match(pattern) ? true : false;
+}
 </script>
+</body>
+</html>

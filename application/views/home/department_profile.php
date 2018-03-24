@@ -24,9 +24,9 @@
             <div class="col-sm-6 col-xs-12 col col-md-12">
                 <h4 style="margin-bottom: 2px;padding-bottom: 2px;border-bottom: 2px solid #009bdb; border-bottom-width: 1px;border-bottom-style: solid; border-bottom-color: rgb(206, 206, 206);"><span class="btn btn-secondary text-uppercase"><?php echo '' ?>About</span></h4>
                 <p>
-                    <?php if( (count($dept_info)) > 0) {
-                     print_r($dept_info[0]->DESCRIPTIONS);    
-                    }?>
+                    <?php if( (count($dept_info)) > 0) { ?>
+                     <p style="text-indent:50px;" class="lead text-justify"><?php print_r($dept_info[0]->DESCRIPTIONS);?></p>   
+                    <?php } ?>
                 </p>
             </div>
         </div>
@@ -64,13 +64,15 @@
                         <!-- Doctor Bio #1 Starts -->
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="bio-box">
+                                <a href="<?php echo site_url('home/profile').'/'.$rows->DOCT_ID.'/'.$rows->DEPT_ID ;?>" id="dprofile_form">
                                 <div class="profile-img" style="padding-top: 10px;">
                                     <img style="margin: auto;border: 1px solid #000;" src='<?php echo $IMG_PATH.'doctors/'.$rows->IMG_PATH  ?>' alt="Doctor" class="img-responsive img-center-sm img-center-xs">
                                 </div>
+                            </a>
                                 <div class="inner">
                                     <h5>Dr. <?php echo $rows->DOC_NAME ?></h5>
                                     <p class="designation"><?php echo $rows->QUALIFICATION?></p>
-                                    <p style="text-align: center; color: green">OP DAYS : <?php $string = $rows->OPDAYS;print_r($string);?></p>
+                                    <small class="my_word_wrap bg-info text-primary text-center"><?php $string = $rows->OPDAYS;print_r($string);?></small>
                                 </div>							
                                 <a href="doctor-profile.html" class="btn btn-transparent inverse text-uppercase">Book An Appointment</a>
                             </div>

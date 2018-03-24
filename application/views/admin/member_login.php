@@ -109,7 +109,7 @@
             <div class='line-wh'></div>
             <button onclick="" class='b-support' title='Forgot Password?'> Forgot Password?</button>
             <div class='line-wh'></div>
-            <a href="<?php echo site_url('admin/users/view_registration'); ?>" class='b-cta' title='Sign up now!'> CREATE ACCOUNT</a>
+            <a href="<?php echo site_url('admin/users/viewRegistration'); ?>" class='b-cta' title='Sign up now!'> CREATE ACCOUNT</a>
         </div>
     </div>
     <script  src="<?php echo base_url(); ?>assets1/bower_components/jquery/dist/jquery.min.js"></script>

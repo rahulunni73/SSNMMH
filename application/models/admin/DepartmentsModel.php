@@ -63,7 +63,7 @@ class DepartmentsModel extends CI_Model {
 
     //get all department details used in department creation page
     public function getDepartments() {
-        $this->db->select('DEPT_ID,DEPT_NAME,DESCRIPTIONS,IMG_PATH');
+        $this->db->select('DEPT_ID,DEPT_NAME,DESCRIPTIONS,IMG_PATH,ICON_PATH');
         $this->db->from('Department_Master');
         $query = $this->db->get();
         return $query->result();
@@ -81,6 +81,29 @@ class DepartmentsModel extends CI_Model {
     }
 
 
+    public function getDeptName($dept_id){
+        $this->db->select('DEPT_NAME');
+        $this->db->from('Department_Master');
+        $this->db->where('DEPT_ID',$dept_id);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function getDeptDoctorsInfo($dept_id) {
+    
+$this->db->select('t1.DOCT_ID,t1.DOC_NAME,t1.QUALIFICATION,t1.SPECIALIZATION,t1.OPDAYS,t1.IMG_PATH,t1.CONS_FEE,t2.DESCRIPTIONS,t1.DEPT_ID');
+      $this->db->from('Doctor_Master as t1');
+      $this->db->where('t1.DEPT_ID', $dept_id);
+      $this->db->join('Department_Master as t2', 't1.DEPT_ID = t2.DEPT_ID', 'LEFT');
+      $query = $this->db->get();
+      $result= $query->result();
+      $rows = array();
+    
+      foreach($result as $r) {
+            $rows[] = $r;
+       }
+        return $rows; 
+    }
 
 }
 ?>

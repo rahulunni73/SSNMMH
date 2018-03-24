@@ -1,5 +1,4 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 Class Users extends CI_Controller {
 
@@ -33,7 +32,7 @@ public function __construct()
 
 	public function viewRegistration()
 	{
-		$this->load->view('admin/member_register'); /*registration page load*/
+		$this->load->view('admin/user_registration'); /*registration page load*/
 	}
 
 

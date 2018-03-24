@@ -1,13 +1,13 @@
-	<!-- Main Container Starts -->
-		<div class="container main-container">
-		<!-- Services Tab Starts -->
-			<div class="tabs-wrap">
+    
+
+	
+	<div class="tabs-wrap">
 			<!-- Nav Tabs Starts -->
-				<ul class="nav nav-tabs">
+				<!-- <ul class="nav nav-tabs">
 					<li class="active">
 						<a href="#tab-1" aria-controls="tab-1" data-toggle="tab">
 							<div class="icon hidden-sm hidden-xs">
-								<img src="images/icons/band-aid.png" alt="Band Aid">
+								<img src='<?php echo base_url();?>assets1/images/dept_icons/band-aid.png' alt="24x7 Ambulance">
 							</div>
 							<h5>First Aid</h5>
 						</a>
@@ -15,7 +15,7 @@
 					<li>
 						<a href="#tab-2" aria-controls="tab-2" data-toggle="tab">
 							<div class="icon hidden-sm hidden-xs">
-								<img src="images/icons/tooth.png" alt="Dental Care">
+								<img src='<?php echo base_url();?>assets1/images/dept_icons/tooth.png' alt="24x7 Ambulance">
 							</div>
 							<h5>Dental Care</h5>
 						</a>
@@ -23,7 +23,7 @@
 					<li>
 						<a href="#tab-3" aria-controls="tab-3" data-toggle="tab">
 							<div class="icon hidden-sm hidden-xs">
-								<img src="images/icons/ambulance.png" alt="24x7 Ambulance">
+								<img src='<?php echo base_url();?>assets1/images/dept_icons/ambulance.png' alt="24x7 Ambulance">
 							</div>
 							<h5>24x7 Ambulance</h5>
 						</a>
@@ -31,15 +31,15 @@
 					<li>
 						<a href="#tab-4" aria-controls="tab-4" data-toggle="tab">
 							<div class="icon hidden-sm hidden-xs">
-								<img src="images/icons/nurse.png" alt="Qualified Doctors">
+								<img src='<?php echo base_url();?>assets1/images/dept_icons/stethoscope.png' alt="24x7 Ambulance">
 							</div>
-							<h5>Qualified Doctors</h5>
+							<h5>Doctors</h5>
 						</a>
 					</li>
 					<li>
 						<a href="#tab-5" aria-controls="tab-5" data-toggle="tab">
 							<div class="icon hidden-sm hidden-xs">
-								<img src="images/icons/saline-bottle.png" alt="Medical Pharmacy">
+								<img src="<?php echo base_url();?>assets1/images/dept_icons/saline-bottle.png" alt="Medical Pharmacy">
 							</div>
 							<h5>Medical Pharmacy</h5>
 						</a>
@@ -47,558 +47,70 @@
 					<li>
 						<a href="#tab-6" aria-controls="tab-6" data-toggle="tab">
 							<div class="icon hidden-sm hidden-xs">
-								<img src="images/icons/stethoscope.png" alt="Pulmonary">
+								<img src="<?php echo base_url();?>assets1/images/dept_icons/path.png" alt="Lab">
 							</div>
-							<h5>Pulmonary</h5>
+							<h5>Laboratory</h5>
 						</a>
 					</li>
-				</ul>
+				</ul> -->
 			<!-- Nav Tabs Ends -->
-			<!-- Tab Content Starts -->
-				<div class="tab-content">
-				<!-- Tab #1 Starts -->
-					<div class="tab-pane fade in active" id="tab-1">
-						<div class="row">
-						<!-- Box #1 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img1.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>First Aid</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #1 Ends -->
-						<!-- Box #2 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img2.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>First Aid</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #2 Ends -->
-						<!-- Box #3 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img3.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>First Aid</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #3 Ends -->
-						<!-- Box #4 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img4.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>First Aid</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #4 Ends -->
-						<!-- Box #5 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img5.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>First Aid</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #5 Ends -->
-						<!-- Box #6 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img6.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>First Aid</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #6 Ends -->						
-						</div>
-					</div>
-				<!-- Tab #1 Ends -->
-				<!-- Tab #2 Starts -->
-					<div class="tab-pane fade" id="tab-2">
-						<div class="row">
-						<!-- Box #1 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img6.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Dental Care</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #1 Ends -->
-						<!-- Box #2 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img5.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Dental Care</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #2 Ends -->
-						<!-- Box #3 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img4.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Dental Care</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #3 Ends -->
-						<!-- Box #4 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img3.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Dental Care</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #4 Ends -->
-						<!-- Box #5 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img2.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Dental Care</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #5 Ends -->
-						<!-- Box #6 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img4.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Dental Care</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #6 Ends -->
-						</div>
-					</div>
-				<!-- Tab #2 Ends -->
-				<!-- Tab #3 Starts -->
-					<div class="tab-pane fade" id="tab-3">
-						<div class="row">
-						<!-- Box #1 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img5.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>24x7 Ambulance</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #1 Ends -->
-						<!-- Box #2 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img6.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>24x7 Ambulance</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #2 Ends -->
-						<!-- Box #3 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img3.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>24x7 Ambulance</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #3 Ends -->
-						<!-- Box #4 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img2.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>24x7 Ambulance</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #4 Ends -->
-						<!-- Box #5 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img1.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>24x7 Ambulance</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #5 Ends -->
-						<!-- Box #6 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img1.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>24x7 Ambulance</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #6 Ends -->
-						</div>
-					</div>
-				<!-- Tab #3 Ends -->
-				<!-- Tab #4 Starts -->
-					<div class="tab-pane fade" id="tab-4">
-						<div class="row">
-						<!-- Box #1 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img2.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Qualified Doctors</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #1 Ends -->
-						<!-- Box #2 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img3.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Qualified Doctors</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #2 Ends -->
-						<!-- Box #3 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img4.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Qualified Doctors</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #3 Ends -->
-						<!-- Box #4 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img5.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Qualified Doctors</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #4 Ends -->
-						<!-- Box #5 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img6.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Qualified Doctors</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #5 Ends -->
-						<!-- Box #6 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img5.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Qualified Doctors</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #6 Ends -->
-						</div>
-					</div>
-				<!-- Tab #4 Ends -->
-				<!-- Tab #5 Starts -->
-					<div class="tab-pane fade" id="tab-5">
-						<div class="row">
-						<!-- Box #1 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img5.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Medical Pharmacy</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #1 Ends -->
-						<!-- Box #2 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img2.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Medical Pharmacy</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #2 Ends -->
-						<!-- Box #3 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img3.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Medical Pharmacy</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #3 Ends -->
-						<!-- Box #4 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img3.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Medical Pharmacy</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #4 Ends -->
-						<!-- Box #5 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img1.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Medical Pharmacy</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #5 Ends -->
-						<!-- Box #6 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img2.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Medical Pharmacy</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #6 Ends -->
-						</div>
-					</div>
-				<!-- Tab #5 Ends -->
-				<!-- Tab #6 Starts -->
-					<div class="tab-pane fade" id="tab-6">
-						<div class="row">
-						<!-- Box #1 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img6.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Pulmonary</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #1 Ends -->
-						<!-- Box #2 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img5.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Pulmonary</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #2 Ends -->
-						<!-- Box #3 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img4.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Pulmonary</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #3 Ends -->
-						<!-- Box #4 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img3.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Pulmonary</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #4 Ends -->
-						<!-- Box #5 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img2.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Pulmonary</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #5 Ends -->
-						<!-- Box #6 Starts -->
-							<div class="col-md-4 col-sm-6 col-xs-12">
-								<div class="box1 text-center-xs">
-									<img src="images/news/news-thumb-img1.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-									<div class="inner">
-										<h4>Pulmonary</h4>
-										<p>
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled.
-										</p>
-										<a href="#" class="btn btn-secondary">Read More</a>
-									</div>
-								</div>
-							</div>
-						<!-- Box #6 Ends -->
-						</div>
-					</div>
-				<!-- Tab #6 Ends -->
-				</div>
-			<!-- Tab Content Ends -->
 			</div>
-		<!-- Services Tab Ends -->
-		</div>
-	<!-- Main Container Ends -->
+
+
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading -->
+      <h1 class="my-4">
+        <small>Services</small>
+      </h1>
+
+      <div class="row">
+
+      	<?php foreach ($serv_details as $row) { ?>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="<?php echo $IMG_PATH.'services/'.$row->IMG_PATH ?>" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title" style="text-align: center;">
+                <a href="#"><?php echo $row->SERVICE_NAME?></a>
+              </h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+
+ <?php }?>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+    <!-- Modal -->
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Notice</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

@@ -30,83 +30,83 @@
                 <h3>Get in touch by filling the form below</h3>
                 <div class="status alert alert-success contact-status"></div>
                 <?php
-                $attributes = array('name' => 'contact-form', 'id' => 'contact-contact-form', 'class' => 'contact-form', 'method' => 'post');
-                echo form_open_multipart('/comments/pushFeedback', $attributes);
+                $attributes = array('name'=>'feedback-form','id' => 'feedback-form', 'class' => 'contact-form', 'method' => 'post');
+                echo form_open('comments/pushFeedback', $attributes);
                 ?>
                 <div class="row">
 
                     <div class="col-md-6">
                         <?php
                         $attributes2 = array(
-                            'for' => 'name',
+                            'for' => 'cus_name',
                         );
                         echo form_label('Name', $this->input->post('doct_name'), $attributes2);
                         ?>
                         <?php
                         $data1 = array(
-                            'name' => 'name',
+                            'name' => 'cus_name',
                             'type' => 'text',
                             'placeholder' => 'Name',
                             'class' => 'form-control'
                         );
-                        echo form_input('name', '', $data1);
+                        echo form_input('cus_name', '', $data1);
                         ?>
-                        <div style="color: red"><?php echo form_error('name'); ?></div>
+                        <div style="color: red"><?php echo form_error('cus_name'); ?></div>
                     </div>
 
                     <div class="col-md-6">
                         <?php
                         $attributes2 = array(
-                            'for' => 'email',
+                            'for' => 'cus_email',
                         );
-                        echo form_label('Email Address', $this->input->post('doct_name'), $attributes2);
+                        echo form_label('Email Address', $this->input->post('cus__name'), $attributes2);
                         ?>
                         <?php
                         $data1 = array(
-                            'name' => 'email',
+                            'name' => 'cus_email',
                             'type' => 'email',
                             'placeholder' => 'Email',
                             'class' => 'form-control'
                         );
-                        echo form_input('email', '', $data1);
+                        echo form_input('cus_email', '', $data1);
                         ?>
-                        <div style="color: red"><?php echo form_error('email'); ?></div>
+                        <div style="color: red"><?php echo form_error('cus_email'); ?></div>
                     </div>
 
                     <div class="col-md-6">
                         <?php
                         $attributes2 = array(
-                            'for' => 'phone',
+                            'for' => 'cus_phone',
                         );
-                        echo form_label('Phone', $this->input->post('phone'), $attributes2);
+                        echo form_label('Phone', $this->input->post('cus_phone'), $attributes2);
                         ?>
                         <?php
                         $data1 = array(
-                            'name' => 'phone',
+                            'name' => 'cus_phone',
                             'type' => 'numeric',
                             'placeholder' => 'Phone',
                             'class' => 'form-control'
                         );
-                        echo form_input('phone', '', $data1);
+                        echo form_input('cus_phone', '', $data1);
                         ?>
-                        <div style="color: red"><?php echo form_error('phone'); ?></div>
+                        <div style="color: red"><?php echo form_error('cus_phone'); ?></div>
                     </div>
 
                     <div class="col-md-6">
                         <?php
                         $attributes2 = array(
-                            'for' => 'subject',
+                            'for' => 'cus_subject',
                         );
-                        echo form_label('Subject', $this->input->post('doct_name'), $attributes2);
+                        echo form_label('Subject', $this->input->post('cus_subject'), $attributes2);
                         ?>
                         <?php
                         $data1 = array(
-                            'name' => 'subject',
+                            'name' => 'cus_subject',
                             'type' => 'text',
                             'placeholder' => 'Subject',
                             'class' => 'form-control'
                         );
-                        echo form_input('subject', '', $data1);
+                        echo form_input('cus_subject', '', $data1);
                         ?>
                         <div style="color: red"><?php echo form_error('subject'); ?></div>
                     </div>
@@ -114,29 +114,32 @@
                     <div class="col-xs-12">
                         <?php
                         $attributes2 = array(
-                            'for' => 'comments',
+                            'for' => 'cus_comments',
                         );
-                        echo form_label('comments', $this->input->post('comments'), $attributes2);
+                        echo form_label('comments', $this->input->post('cus_comments'), $attributes2);
                         ?>
                         <?php
                         $data1 = array(
-                            'name' => 'comments',
+                            'name' => 'cus_comments',
                             'type' => 'text',
                             'placeholder' => 'Comments',
                             'class' => 'form-control'
                         );
-                        echo form_input('comments', '', $data1);
+                        echo form_input('cus_comments', '', $data1);
                         ?>
-                        <div style="color: red"><?php echo form_error('comments'); ?></div>
+                        <div style="color: red"><?php echo form_error('cus_comments'); ?></div>
 
                     </div>
 
+                    <?php form_close(); ?>
+                    
+
                     <div class="col-xs-12">
-                        <input type="submit" class="btn btn-black text-uppercase" value="Submit">
+                        <button  name='feedbackBtn' id="feedbackBtn" class="btn btn-md  btn-secondary">Submit</button>
                     </div>
 
                 </div>               
-                <?php form_close(); ?>
+                
 
 
                 <?php
@@ -200,15 +203,44 @@
 <div class="map"></div>
 <!-- Google Map Ends -->
 
+        <!-- Modal -->
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Notice</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 <script src="<?php echo base_url();?>assets/js/jquery-1.11.3.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB19NBJmGevwfkvRp7IRMbqw9pTPNzs7dg"></script>
 <script>
+
+/*Form Submission*/
+$('#feedbackBtn').click(function(){
+    $('#feedback-form').submit();
+});
+
     $(function () {
     // GOOGLE MAP
     function initialize() {
     var myLatLng = {lat: 8.729151, lng: 76.733518};
             var map = new google.maps.Map(document.querySelector('.map'), {
-            zoom: 14,
+            zoom: 16,
                     center: myLatLng
             });
             var marker = new google.maps.Marker({
@@ -219,6 +251,7 @@
             marker.setMap(map);
     }
     google.maps.event.addDomListener(window, 'load', initialize);
+});
 </script>
 
 

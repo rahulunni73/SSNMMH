@@ -1,4 +1,5 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
 /**
  * Description of Create
  *  
@@ -114,7 +115,7 @@ class Doctors extends CI_Controller {
     public function getFormValuesDoctors(){
         $qualification = $this->input->post('qualification[]');
         $op_days = $this->input->post('opdays[]');
-        $qualficationString = implode(',', $qualification);
+        $news_venue = implode(',', $qualification);
         $opDaysString = implode(',', $op_days);
         $values = array('doctor_name' => $this->input->post('doctor_name'),
             'qualficationString' => $qualficationString,

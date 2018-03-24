@@ -109,6 +109,18 @@ public function updateDoctorInfo($values, $result)
     }
 
 
+
+    //get all doctors details
+    public function getGroupDoctorInfo($doctorsId,$deptId) {
+     $this->db->select('t1.DOCT_ID,t1.DOC_NAME,t1.QUALIFICATION,t1.SPECIALIZATION,t1.OPDAYS,t1.IMG_PATH,t1.CONS_FEE,t2.DEPT_NAME,t2.DEPT_ID');
+      $this->db->from('Doctor_Master as t1');
+      $this->db->where('t1.DOCT_ID <>', $doctorsId);
+      $this->db->where('t1.DEPT_ID', $deptId);
+      $this->db->join('Department_Master as t2', 't1.DEPT_ID = t2.DEPT_ID', 'LEFT');
+      $query = $this->db->get();
+        return $query->result();
+    }
+
     //get all doctors details
     public function getDoctorsInfo() {
      $this->db->select('t1.DOCT_ID,t1.DOC_NAME,t1.QUALIFICATION,t1.SPECIALIZATION,t1.OPDAYS,t1.IMG_PATH,t1.CONS_FEE,t2.DEPT_NAME,t2.DEPT_ID');

@@ -26,7 +26,7 @@
                         </li>
                         <li class="clearfix">
                             <i class="fa fa-envelope"></i>
-                            <a href="mailto:info@yourhospitalsite.com">ssnmmhospital@gmial.com</a>
+                            <a href="mailto:ssnmmhospital@gmial.com">ssnmmhospital@gmial.com</a>
                         </li>
                     </ul>
                 </div>
@@ -67,15 +67,16 @@
                     <h4>Signup Newsletter</h4>
                     <form action="#" class="newsletter">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name">
+                            <input type="text" id="s_name" class="form-control" placeholder="Your Name">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Enter your Email Address">
+                            <input type="email" id="s_email" class="form-control" placeholder="Enter your Email Address">
                         </div>
-                        <button type="submit" class="btn btn-lg btn-block btn-secondary">Submit</button>
-                    </form>
+                    </form> 
+                        <button id="send" class="btn btn-lg btn-block btn-secondary">Submit</button>
+
                 </div>
-                <!-- Signup Newsletter Ends -->
+                <!-- Signup Newsletter Ends -->-->
             </div>
         </div>
         <!-- Nested Container Ends -->
@@ -97,42 +98,95 @@
     <!-- Copyright Ends -->
 </footer>
 <!-- Footer Ends -->
+
 <script src="<?php echo base_url(); ?>assets/js/jquery-1.11.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery-migrate-1.2.1.min.js"></script>  
 <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/plugins/camera/js/camera.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/custom.js"></script>
-<script>
-    $(window).on('load', function () { // makes sure the whole site is loaded 
-        $('#status').fadeOut();//will first fade out the loading animation 
-        $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+<script src="<?php echo base_url(); ?>assets/js/plugins/camera/js/jquery.mobile.customized.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/plugins/camera/js/jquery.easing.1.3.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/plugins/camera/js/camera.min.js"></script>  
+<script src="<?php echo base_url(); ?>assets/js/plugins/shuffle/jquery.shuffle.modernizr.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/carousel.js"></script>
+<script type="text/javascript">
+
+    $(window).on('load', function () {         
+    if( $.cookie('splashscreen') == null ) {
+         var date = new Date();
+         var minutes = 30;
+         date.setTime(date.getTime() + (minutes * 60 * 1000));
+        $.cookie("splashscreen", 1, { expires: date }); // cookie is valid for 10 days
+        $('#preloader').show();
+        $('#status').delay(1000).fadeOut('slow');//will first fade out the loading animation 
+        $('#preloader').delay(1000).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+        }
         $('body').delay(350).css({'overflow': 'visible'});
     });
 
-    $(function () {
-        //news letter signup
+
+
+            // CAMERA SLIDER
+    $("#camera_wrap_1").camera({
+        alignment: 'center',
+        autoAdvance: true,
+        mobileAutoAdvance: true,
+        barDirection: 'leftToRight',
+        barPosition: 'bottom',
+        loader: 'none',
+        opacityOnGrid: false,
+        cols: 12,
+        height: '50%',
+        playPause: false,
+        pagination: false,
+        imagePath: './assets/js/plugins/camera/images/'
+    });
+
+//news letter signup
         $("#send").click(function () {
             var base_url = "<?php echo base_url(); ?>";
-            $.ajax({
+            
+        if( ($("#s_name").val() == '' ) || ($("#s_email").val() == '' ) ){
+                $("#Modal").find(".modal-body" ).text("Give Name and Email");
+                    $("#Modal").modal({show: true});
+        }else{
+            
+            if(validateEmail($("#s_email").val())){
+                $.ajax({
                 type: "POST",
-                url: base_url + "index.php?/comments/newsLetterSignup",
-                data: {name: $("#name").val(), email: $("#email").val()},
-                dataType: "text",
-                cache: false,
+                url: base_url + "index.php/comments/newsLetter",
+                data: {"name": $("#s_name").val(), "email": $("#s_email").val()},
+                dataType: "json",
                 success:
                         function (data) {
-                            var test = JSON.parse(data);
-                            alert(test.status);
-                            $("#name").val('');
-                            $("#email").val('');
+                            $("#Modal").find( ".modal-body" ).text(data.status +"for News Letter Signup");
+                            $("#Modal").modal({show: true});
                         },
                 error: function (data) {
-                    var test = JSON.parse(data);
-                    alert(test.status);
-                    $("#name").val('');
-                    $("#email").val('');
+                    $("#Modal").find( ".modal-body" ).text("News Letter Signup Failed");
+                    $("#Modal").modal({show: true});
                 }
             });
-            return false;
-        });
-    });
+            }else{
+              $("#Modal").find(".modal-body" ).text("Give a valid email address");
+                    $("#Modal").modal({show: true});  
+            }
+        }
+
+});  
+
+/* jQuery Validate Emails with Regex */
+function validateEmail(Email) {
+    var pattern = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+    return $.trim(Email).match(pattern) ? true : false;
+}
+
+
 </script>
+
+
+
+
+</body>
+</html>

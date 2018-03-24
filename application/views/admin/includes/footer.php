@@ -202,19 +202,6 @@
   <div class="control-sidebar-bg"></div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
 <!-- ./wrapper -->
 
@@ -227,11 +214,30 @@
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <!-- Bootstrap 3.3.7 -->
 <script src="<?php echo base_url() . "assets1/bower_components/bootstrap/dist/js/bootstrap.min.js" ?>"></script>
+<!-- DataTables -->
+<script src="<?php echo base_url() . "assets1/bower_components/datatables.net/js/jquery.dataTables.min.js"?>"></script>
+<script src="<?php echo base_url() . "assets1/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js" ?>"></script>
+
 <script src="<?php echo base_url() . "assets1/bower_components/select2/dist/js/select2.full.min.js" ?>"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url() . "assets1/dist/js/adminlte.min.js" ?>"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url() . "assets1/dist/js/demo.js" ?>"></script>
+
+<script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>
+
 </body>
 </html>
