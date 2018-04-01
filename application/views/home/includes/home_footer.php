@@ -3,26 +3,19 @@
     <!-- Footer Area Starts -->
     <div class="footer-area">
         <!-- Nested Container Starts -->
-        <div class="container">
+        <div class="container-fluid ">
             <div class="row">
                 <!-- Hosptial Information Starts -->
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <h4>Hosptial Information</h4>
-                    <p>
-                        Sivagiri Sree Narayana Medical Mission Hospital
-                    </p>
+                <div class="col-md-5 col-sm-12 col-xs-12">
+                    <h4>Address</h4>
                     <ul class="list-unstyled address-list">
                         <li class="clearfix address">
                             <i class="fa fa-home"></i>
-                            Puthenchantha, Varkala,Thiruvananthapuram
+                             Sivagiri Sree Narayana Medical Mission Hospital, Puthenchantha, Varkala, Thiruvananthapuram
                         </li>
                         <li class="clearfix">
                             <i class="fa fa-fax"></i>
-                            040 2602248
-                        </li>
-                        <li class="clearfix">
-                            <i class="fa fa-phone"></i>
-                            0470 2602249
+                            040 2602248 |  0470 2602249 |  0470 2601228
                         </li>
                         <li class="clearfix">
                             <i class="fa fa-envelope"></i>
@@ -31,39 +24,9 @@
                     </ul>
                 </div>
                 <!-- Hosptial Information Ends -->
-                <!-- Services Starts -->
-                <div class="col-md-2 col-sm-4 col-xs-12">
-                    <h4>Services</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Pediatric Clinic</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Diagnosis Clinic</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Cardiac Clinic</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Laboratory Analysis</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Dental Clinic</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Gynecological Clinic</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Psychological</a></li>
-                    </ul>
-                </div>
-                <!-- Services Ends -->
-                <!-- Twitter Starts -->
-                <div class="col-md-3 col-sm-4 col-xs-12">
-                    <h4>Twitter</h4>
-                    <ul class="list-unstyled tweets-list">
-                        <li>
-                            <i class="fa fa-twitter"></i>
-                            Our Hospitals Website Launched.
-                            <a href="#">http://t.co/xyz12abc</a>
-                        </li>
-                        <li>
-                            <i class="fa fa-twitter"></i>
-                            Our Hospitals Twitter Page, please follow.
-                            <a href="#">http://t.co/testlink</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Twitter Ends -->
-                <!-- Signup Newsletter Starts -->
-                <div class="col-md-3 col-xs-12 newsletter-block">
+
+             <!-- Signup Newsleter Starts -->
+                <div class="col-md-5 col-xs-12 newsletter-block">
                     <h4>Signup Newsletter</h4>
                     <form action="#" class="newsletter">
                         <div class="form-group">
@@ -73,10 +36,27 @@
                             <input type="email" id="s_email" class="form-control" placeholder="Enter your Email Address">
                         </div>
                     </form> 
-                        <button id="send" class="btn btn-lg btn-block btn-secondary">Submit</button>
+                        <button id="send" class="btn btn-lg  btn-secondary ">Submit</button>
 
                 </div>
-                <!-- Signup Newsletter Ends -->-->
+                <!-- Signup Newsletter Ends -->
+                <!-- Services Starts -->
+                 <div class="col-md-2 col-sm-4 col-xs-12">
+                    <h4>Social</h4>
+                    <ul class="list-unstyled tweets-list">
+                        <li>
+                            <i class="fa fa-facebook"></i>
+                             Follow us facebook
+                            <a href="#"></a>
+                        </li>
+                        <li>
+                            <!-- <i class="fa fa-twitter"></i>
+                            <a href="#"></a> -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- Twitter Ends -->
+
             </div>
         </div>
         <!-- Nested Container Ends -->
@@ -84,7 +64,7 @@
     <!-- Footer Area Ends -->
     <!-- Copyright Starts -->
     <div class="copyright">
-        <div class="container clearfix">
+        <div class="container-fluid clearfix">
             <p class="pull-left">
                 &copy; Copyright 2017. AlL Rights Reserved By <span>ssnmmh</span>
             </p>
@@ -118,8 +98,8 @@
          date.setTime(date.getTime() + (minutes * 60 * 1000));
         $.cookie("splashscreen", 1, { expires: date }); // cookie is valid for 10 days
         $('#preloader').show();
-        $('#status').delay(1000).fadeOut('slow');//will first fade out the loading animation 
-        $('#preloader').delay(1000).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+        //$('#status').delay(3000).fadeOut('slow');//will first fade out the loading animation 
+        $('#preloader').delay(3000).fadeOut('slow'); // will fade out the white DIV that covers the website. 
         }
         $('body').delay(350).css({'overflow': 'visible'});
     });

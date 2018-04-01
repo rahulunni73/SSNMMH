@@ -28,14 +28,10 @@
     </head>
 
 
-
-
-
-
-
-
-
     <body>
+         <div id="preloader" style="background: yellow;" hidden="true">
+  <div id="status"><img src=""></div> 
+</div>
         <!-- Header Starts -->
         <header class="main-header">
             <!-- Nested Container Starts -->
@@ -73,8 +69,9 @@
                             <!-- Collapse Button Ends -->
                             <!-- Logo Starts -->
                             <a href="<?php echo site_url('home/index') ?>" class="navbar-brand">
-                                <i class="fa fa-heartbeat"></i>
-                                S.S.N.M.M.H.
+                                <!-- <i class="fa fa-heartbeat"></i> -->
+                                <img src="<?php echo base_url(); ?>assets/images/logo.png" class="img-fluid" style=" margin-right:8px;float:left;height:32px;width:32px; ">
+                                <span>S.S.N.M.M.H.</span>
                             </a>
                             <!-- Logo Ends -->
                         </div>

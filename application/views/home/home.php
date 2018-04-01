@@ -114,14 +114,33 @@
 <!-- Main Container Ends -->
 
 
-
 <!-- About Featured Section Starts -->
 <section class="parallax about-featured ">
     <div>
     <div class="container">
-        <h3 class="lite">Get Well Soon</h3>
+        <h3 class="lite"></h3>
         <h2 class="lite">Our Hosptial <span>Services</span></h2>
         <ul class="list-unstyled list row">
+
+
+            <!-- List #2 Starts -->
+            <li class="col-md-4 col-sm-6 col-xs-12">
+                <i class="fa fa-user-md"></i>
+                <h4>Passionate Doctors &amp; Nurses</h4>
+                <p>Best Doctors is committed to helping you make the right medical decision with confidence.
+                </p>
+            </li>
+            <!-- List #2 Ends -->
+
+            <!-- List #3 Starts -->
+            <li class="col-md-4 col-sm-6 col-xs-12">
+                <i class="fa fa-ambulance"></i>
+                <h4>24 /7 Emergency Services</h4>
+                <p>Round-the-clock emergency services, with a facility that is fully equipped and managed by a qualified emergency care professionals.
+                </p>
+            </li>
+            <!-- List #3 Ends -->
+
             <!-- List #1 Starts -->
             <li class="col-md-4 col-sm-6 col-xs-12">
                 <i class="fa fa-trophy"></i>
@@ -131,49 +150,32 @@
                 </p>
             </li>
             <!-- List #1 Ends -->
-            <!-- List #2 Starts -->
-            <li class="col-md-4 col-sm-6 col-xs-12">
-                <i class="fa fa-heartbeat"></i>
-                <h4>Passionate Doctors &amp; Nurses</h4>
-                <p>
-                    Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover.
-                </p>
-            </li>
-            <!-- List #2 Ends -->
-            <!-- List #3 Starts -->
-            <li class="col-md-4 col-sm-6 col-xs-12">
-                <i class="fa fa-ambulance"></i>
-                <h4>24 /7 Emergency Services</h4>
-                <p>
-                    Making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model.
-                </p>
-            </li>
-            <!-- List #3 Ends -->
+
             <li class="clearfix visible-md"></li>
             <!-- List #4 Starts -->
             <li class="col-md-4 col-sm-6 col-xs-12">
-                <i class="fa fa-calendar"></i>
-                <h4>Dispense Medicine</h4>
+                <i class="fa fa-medkit"></i>
+                <h4>24x7 Pharmacy</h4>
                 <p>
-                    Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will.
+                    Provide 24 x 7 pharmacy to support our patients
                 </p>
             </li>
             <!-- List #4 Ends -->
             <!-- List #5 Starts -->
             <li class="col-md-4 col-sm-6 col-xs-12">
-                <i class="fa fa-user-md"></i>
+             <i class="fa fa-heartbeat"></i>
                 <h4>Latest Technologies</h4>
                 <p>
-                    Making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover.
+                   Offers cutting edge technology for diagnostic and therapeutic procedures.
                 </p>
             </li>
             <!-- List #5 Ends -->
             <!-- List #6 Starts -->
             <li class="col-md-4 col-sm-6 col-xs-12">
-                <i class="fa fa-medkit"></i>
-                <h4>HealthCare Professionals</h4>
+               <i class="fa fa-flask"></i>
+                <h4>24 X 7 Laboratory</h4>
                 <p>
-                    Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a for 'lorem ipsum' will uncover.
+                    Provide 24 hours a day and 7 days a week service with a primary focus that ‘patients come first’
                 </p>
             </li>
             <!-- List #6 Ends -->
@@ -183,6 +185,10 @@
 </div>
 </section>
 <!-- About Featured Section Starts -->
+
+
+
+
 <!-- Main Container Starts -->
 <div class="container main-container">
     <!-- Medical Services Section Ends -->
@@ -593,7 +599,7 @@
             </div>
             <div class="col-md-3 col-xs-12 hidden-sm hidden-xs">
                 <div class="box-img">
-                    <img src="<?php echo base_url(); ?>assets/images/appointment-booking-img1.png" alt="" />
+                    <img src="<?php echo base_url(); ?>assets/images/appointment-booking-img.png" alt="" />
                 </div>
             </div>
         </div>
@@ -601,8 +607,8 @@
     <!-- Book Appointment Box Ends -->
 </div>
 <!-- Main Container Ends -->
- <div id="preloader" style="background: yellow;" hidden="true">
-  <div id="status"><img src="<?php echo base_url();?>assets1/images/users/guruphoto.png"></div>
+ <div id="preloader" style="" hidden="true">
+  <div id="status"><img src="<?php echo base_url();?>assets1/images/users/guru.png"></div>
 </div> 
 
 <!-- Modal -->
