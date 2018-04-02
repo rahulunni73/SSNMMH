@@ -96,9 +96,9 @@
          var date = new Date();
          var minutes = 30;
          date.setTime(date.getTime() + (minutes * 60 * 1000));
-        $.cookie("splashscreen", 1, { expires: date }); // cookie is valid for 10 days
+        $.cookie("splashscreen", 1, { expires: date }); // cookie is valid for 30 minutes
         $('#preloader').show();
-        //$('#status').delay(3000).fadeOut('slow');//will first fade out the loading animation 
+        $('#status').delay(3000).fadeOut('slow');//will first fade out the loading animation 
         $('#preloader').delay(3000).fadeOut('slow'); // will fade out the white DIV that covers the website. 
         }
         $('body').delay(350).css({'overflow': 'visible'});

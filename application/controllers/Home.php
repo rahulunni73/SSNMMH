@@ -156,6 +156,12 @@ class Home extends CI_Controller {
     }
 
 
+    public function appointments(){
+        $data = array('main_content' => 'home/appointments');
+        $this->load->view('home/includes/common_template', $data);
+
+    }
+
 
 
 }

@@ -335,6 +335,7 @@
         <!-- Latest News Carousel Ends -->
     </div>
 </section>
+
 <!-- Medical Department aside Starts -->
  
         <aside class="col-md-4 col-xs-12">
@@ -359,9 +360,9 @@
                         <div id="collapse1" class="panel-collapse collapse"><!--provide in class to open accordian by default--> 
                             <div class="panel-body">
                                 <p>
-                                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions ...
+                                    An emergency is a situation that poses an immediate risk to health, life, property, or environment. Most emergencies require urgent intervention to prevent a worsening of the situation, although in some situations, mitigation may not be possible and agencies may only be able to offer palliative care for the aftermath.
                                 </p>
-                                <a href="#" class="btn btn-sm btn-transparent inverse">Details</a>
+                               
                             </div>
                         </div>
                         <!-- Panel Body Ends -->
@@ -383,9 +384,9 @@
                         <div id="collapse2" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>
-                                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions ...
+                                    Cardiology is a branch of medicine dealing with disorders of the heart as well as parts of the circulatory system. The field includes medical diagnosis and treatment of congenital heart defects, coronary artery disease, heart failure, valvular heart disease and electrophysiology. Physicians who specialize in this field of medicine are called cardiologists, a specialty of internal medicine. Pediatric cardiologists are pediatricians who specialize in cardiology. Physicians who specialize in cardiac surgery are called cardiothoracic surgeons or cardiac surgeons, a specialty of general surgery.
                                 </p>
-                                <a href="#" class="btn btn-sm btn-transparent inverse">Details</a>
+                               
                             </div>
                         </div>
                         <!-- Panel Body Ends -->
@@ -398,7 +399,7 @@
                             <h5 class="panel-title">
                                 <i class="icon fa fa-scissors"></i>
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                                    INTERNAL MEDICINE
+                                    GENERAL MEDICINE
                                 </a>
                             </h5>
                         </div>
@@ -407,9 +408,9 @@
                         <div id="collapse3" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>
-                                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions ...
+                                    Internal medicine or general medicine (in Commonwealth nations) is the medical specialty dealing with the prevention, diagnosis, and treatment of adult diseases. Physicians specializing in internal medicine are called internists, or physicians (without a modifier) in Commonwealth nations. Internists are skilled in the management of patients who have undifferentiated or multi-system disease processes. Internists care for hospitalized and ambulatory patients and may play a major role in teaching and research.
                                 </p>
-                                <a href="#" class="btn btn-sm btn-transparent inverse">Details</a>
+                                
                             </div>
                         </div>
                         <!-- Panel Body Ends -->
@@ -431,9 +432,9 @@
                         <div id="collapse4" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>
-                                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions ...
+                                    Neurology is a branch of medicine dealing with disorders of the nervous system. Neurology deals with the diagnosis and treatment of all categories of conditions and disease involving the central and peripheral nervous systems (and their subdivisions, the autonomic and somatic nervous systems), including their coverings, blood vessels, and all effector tissue, such as muscle.[1] Neurological practice relies heavily on the field of neuroscience, which is the scientific study of the nervous system.
                                 </p>
-                                <a href="#" class="btn btn-sm btn-transparent inverse">Details</a>
+                                
                             </div>
                         </div>
                         <!-- Panel Body Ends -->
@@ -455,9 +456,11 @@
                         <div id="collapse5" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>
-                                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions ...
+                                    Gastroenterology (MeSH heading)[1] is the branch of medicine focused on the digestive system and its disorders.
+
+                                Diseases affecting the gastrointestinal tract, which include the organs from mouth to anus, along the alimentary canal, are the focus of this speciality. Physicians practicing in this field are called gastroenterologists. They have usually completed about eight years of pre-medical and medical education, a year-long internship (if this is not a part of the residency), three years of an internal medicine residency, and two to three years in the gastroenterology fellowship. Gastroenterologists perform a number of diagnostic and therapeutic procedures including colonoscopy, endoscopy, endoscopic retrograde cholangiancreatography (ERCP), endoscopic ultrasound and liver biopsy. Some gastroenterology trainees will complete a "fourth-year" (although this is often their seventh year of graduate medical education) in transplant hepatology, advanced endoscopy, inflammatory bowel disease, motility or other topics.
                                 </p>
-                                <a href="#" class="btn btn-sm btn-transparent inverse">Details</a>
+                               
                             </div>
                         </div>
                         <!-- Panel Body Ends -->
@@ -479,9 +482,9 @@
                         <div id="collapse6" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>
-                                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions ...
+                                    Ophthalmology is the branch of medicine that deals with the anatomy, physiology and diseases of the eyeball and orbit.[2] An ophthalmologist is a specialist in medical and surgical eye disease. Their credentials include a doctorate degree in medicine, followed by an additional four years of Ophthalmology residency training. Additional training may be sought through a fellowship in a particular specialty of eye pathology.[3] Ophthalmologists are allowed to medically treat eye disease, prescribe glasses or contact lenses, implement laser therapy, and perform surgery when needed.[4] Ophthalmologists may participate in academic research on the diagnosis and treatment for eye disorders.
                                 </p>
-                                <a href="#" class="btn btn-sm btn-transparent inverse">Details</a>
+                               
                             </div>
                         </div>
                         <!-- Panel Body Ends -->
@@ -503,9 +506,9 @@
                         <div id="collapse7" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>
-                                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions ...
+                                    Obstetrics and gynecology (commonly known as OB-GYN, OBG, O&G or obs and gynae) is the medical specialty that deals with obstetrics and gynecology. Postgraduate training programs for both aspects are usually combined, preparing the practicing obstetrician-gynecologist to be adept at the care of female reproductive organs' health and at the management of pregnancy, although many doctors go on to develop subspecialty interests in one field or the other.
                                 </p>
-                                <a href="#" class="btn btn-sm btn-transparent inverse">Details</a>
+                               
                             </div>
                         </div>
                         <!-- Panel Body Ends -->
@@ -514,19 +517,19 @@
                         <div class="panel-heading">
                             <h5 class="panel-title">
                                 <i class="icon fa fa-ambulance"></i>
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">
                                     PEDIATRICS
                                 </a>
                             </h5>
                         </div>
                         <!-- Panel Heading Ends -->
                         <!-- Panel Body Starts -->
-                        <div id="collapse7" class="panel-collapse collapse">
+                        <div id="collapse8" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>
-                                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions ...
+                                    Pediatrics (also spelled paediatrics or pædiatrics) is the branch of medicine that involves the medical care of infants, children, and adolescents. The American Academy of Pediatrics recommends people be under pediatric care up to the age of 21.[1] A medical doctor who specializes in this area is known as a pediatrician, or paediatrician. The word pediatrics and its cognates mean "healer of children"; they derive from two Greek words: παῖς (pais "child") and ἰατρός (iatros "doctor, healer"). Pediatricians work both in hospitals, particularly those working in its subspecialties such as neonatology, and as primary care physicians.
                                 </p>
-                                <a href="#" class="btn btn-sm btn-transparent inverse">Details</a>
+                               
                             </div>
                         </div>
                         <!-- Panel Body Ends -->
@@ -535,19 +538,19 @@
                         <div class="panel-heading">
                             <h5 class="panel-title">
                                 <i class="icon fa fa-ambulance"></i>
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
                                     DENTISTRY
                                 </a>
                             </h5>
                         </div>
                         <!-- Panel Heading Ends -->
                         <!-- Panel Body Starts -->
-                        <div id="collapse7" class="panel-collapse collapse">
+                        <div id="collapse9" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>
-                                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions ...
+                                   Dentistry is a branch of medicine that consists of the study, diagnosis, prevention, and treatment of diseases, disorders and conditions of the oral cavity, commonly in the dentition but also the oral mucosa, and of adjacent and related structures and tissues, particularly in the maxillofacial (jaw and facial) area.[1] Although primarily associated with teeth among the general public, the field of dentistry or dental medicine is not limited to teeth but includes other aspects of the craniofacial complex including the temporomandibular and other supporting structures.
                                 </p>
-                                <a href="#" class="btn btn-sm btn-transparent inverse">Details</a>
+                                
                             </div>
                         </div>
                         <!-- Panel Body Ends -->
@@ -556,19 +559,19 @@
                         <div class="panel-heading">
                             <h5 class="panel-title">
                                 <i class="icon fa fa-ambulance"></i>
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">
                                    DERMATOLOGY
                                 </a>
                             </h5>
                         </div>
                         <!-- Panel Heading Ends -->
                         <!-- Panel Body Starts -->
-                        <div id="collapse7" class="panel-collapse collapse">
+                        <div id="collapse10" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>
-                                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions ...
+                                    Dermatology (from ancient Greek δέρμα, derma which means skin and λογία, logia) is the branch of medicine dealing with the skin, nails, hair and its diseases. It is a specialty with both medical and surgical aspects.[3][4][5] A dermatologist treats diseases, in the widest sense and some cosmetic problems of the skin, scalp, hair, and nails.
                                 </p>
-                                <a href="#" class="btn btn-sm btn-transparent inverse">Details</a>
+                                
                             </div>
                         </div>
                         <!-- Panel Body Ends -->
@@ -579,6 +582,8 @@
             </div>
         </aside>
         <!-- Medical Department aside Ends -->
+
+
     </div>
     <!-- Content Ends -->
 
@@ -595,7 +600,7 @@
                 <h3><i class="fa fa-phone-square"></i>  0470 2602248</h3>
             </div>
             <div class="col-md-4 col-xs-12 text-center-sm text-center-xs">
-                <a href="doctor-profile.html" class="btn btn-main text-uppercase">Book your Appointment</a>
+                <a href="<?php echo site_url('home/appointments') ?>" class="btn btn-main text-uppercase">Book your Appointment</a>
             </div>
             <div class="col-md-3 col-xs-12 hidden-sm hidden-xs">
                 <div class="box-img">
@@ -607,7 +612,7 @@
     <!-- Book Appointment Box Ends -->
 </div>
 <!-- Main Container Ends -->
- <div id="preloader" style="" hidden="true">
+ <div id="preloader" hidden="true">
   <div id="status"><img src="<?php echo base_url();?>assets1/images/users/guru.png"></div>
 </div> 
 

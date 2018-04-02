@@ -29,9 +29,6 @@
 
 
     <body>
-         <div id="preloader" style="background: yellow;" hidden="true">
-  <div id="status"><img src=""></div> 
-</div>
         <!-- Header Starts -->
         <header class="main-header">
             <!-- Nested Container Starts -->
